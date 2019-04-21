@@ -1,4 +1,4 @@
-aws s3 sync s3://$1/datacoop .
+aws s3 sync s3://$1 .
 
 FILES=./*
 for f in $FILES
