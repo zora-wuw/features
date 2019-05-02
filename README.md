@@ -21,6 +21,10 @@ Group rows and count the number of the same records
 Inputs:
 * Input-Folder : read all files from this path
 * Output-Folder : write output files into this path
+* Language : If "en", then keep the rows with only letters and numbers.
+             If "all", then keep all rows.
+             If any string other than "en", "all", then only keep the rows with non-English word
+* Delete-None : If "yes", then the rows with "none" value will be deleted.
 
 ### f0004: Read records from MongoDB and write into a csv file
 Create a csv file with two columns (hashtag, user_location) for each collection
