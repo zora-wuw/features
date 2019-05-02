@@ -11,4 +11,4 @@ Inputs:
 * IP : MongoDB IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
-* Create-Index : "yes" or "no'. If "no", it won't create index but just list the collection about whether there is a text index or not.
+* Create-Index : "yes" or "no". If "no", it won't create index but just list the collection about whether there is a text index or not.
