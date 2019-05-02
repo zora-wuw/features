@@ -13,10 +13,8 @@ Inputs:
 * IP : MongoDB IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
-<pre>
 * Create-Index : Senario 1: If "1", then create index  
-                 Senario 2: If "2", it lists the collections that require index.
-</pre>
+&nbsp; &nbsp; &nbsp; Senario 2: If "2", it lists the collections that require index.
 
 ### f0003: Group Rows in CSV Files
 Group rows and count the number of the same records
