@@ -24,3 +24,8 @@ Inputs:
 
 ### f0004: Read records from MongoDB and write into a csv file
 Create a csv file with two columns (hashtag, user_location) for each collection
+
+Inputs:
+* IP : MongoDB IP
+* MongoDB-Port
+* Contain-String : filter the collection by the contained string in the name
