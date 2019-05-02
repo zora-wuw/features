@@ -4,6 +4,7 @@
 * f0002: Create Index
 * f0003: Group Rows in CSV Files
 * f0004: Read records from MongoDB and write into a csv file
+* f0005: Count the number of connections between two hashtags
 
 ## Detailed Description
 ### f0002: Create Index
@@ -31,6 +32,8 @@ Inputs:
   - If "1", the rows with "none" value will be deleted.
   - If "2", the rows with "none" value will not be deleted.
   
+Outputs:
+* CSV files 
 
 ### f0004: Read records from MongoDB and write into a csv file
 Create a csv file with two columns (hashtag, user_location) for each collection
@@ -39,3 +42,17 @@ Inputs:
 * IP : MongoDB IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
+
+Outputs:
+* CSV files
+
+### f0005: Count the number of connections between two hashtags
+Create csv file with three columns (hashtag, linked_hashtag, number) for each collection
+
+Inputs:
+* IP : MongoDB IP
+* MongoDB-Port
+* Contain-String : filter the collection by the contained string in the name.
+
+Outputs:
+* CSV files
