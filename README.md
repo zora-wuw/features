@@ -13,7 +13,7 @@ Inputs:
 * IP : MongoDB IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
-* Create-Index : 
+* Create-Index :  
 Senario 1: If "1", then create index  
 Senario 2: If "2", it lists the collections that require index.
 
