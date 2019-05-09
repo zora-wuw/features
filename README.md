@@ -5,6 +5,7 @@
 * f0003: Group Rows in CSV Files
 * f0004: Read records from MongoDB and write into a csv file
 * f0005: Count the number of connections between two hashtags
+* f0006: Aggregate all grouped csv into one csv
 
 ## Detailed Description
 ### f0002: Create Index
@@ -53,6 +54,16 @@ Inputs:
 * IP : MongoDB IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name.
+
+Outputs:
+* CSV files
+
+### f0006: Aggregate all grouped csv into one csv
+Aggregate every two csv files into one csv file at each time, after f0003 is completed
+
+Inputs:
+* Input-Folder : read all files from this path
+* Output-Folder : write output files into this path
 
 Outputs:
 * CSV files
