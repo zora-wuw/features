@@ -6,6 +6,7 @@
 * f0004: Read records from MongoDB and write into a csv file
 * f0005: Count the number of connections between two hashtags
 * f0006: Aggregate all grouped csv into one csv
+* f0007: Get accurate location based on user location
 
 ## Detailed Description
 ### f0002: Create Index
@@ -64,6 +65,19 @@ Aggregate every two csv files into one csv file at each time, after f0003 is com
 Inputs:
 * Input-Folder : read all files from this path
 * Output-Folder : write output files into this path
+
+Outputs:
+* CSV files
+
+
+### f0007: Get accurate location based on user location
+Comparing user location with geo file and add three columns (city, state, country) in the new csv file
+
+Inputs:
+* Input-Folder : read all files from this path
+* Output-Folder : write output files into this path
+* Aus-File-Path : path of the au.csv in the supporting-files
+* World-File-Path : path of the world-cities.csv in the supporting-files
 
 Outputs:
 * CSV files
