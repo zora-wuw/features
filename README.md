@@ -7,7 +7,7 @@
 * f0005: Count the number of connections between two hashtags
 * f0006: Aggregate all grouped csv into one csv
 * f0007: Get accurate location based on user location
-* f0008: Check the record number of collection and send message to Slack 
+* f0008: Monitor NIFI
 
 ## Detailed Description
 ### f0002: Create Index
@@ -83,8 +83,8 @@ Inputs:
 Outputs:
 * CSV files
 
-### f0008: Check the record number of collection and send message to Slack 
-Send a message to Slack only if the number of record is reduced or the same compared with the last run
+### f0008: Monitor NIFI
+Send a message to Slack only if the record number of collection is reduced or the same compared with the last run
 
 Inputs:
 * IP : MongoDB server IP
