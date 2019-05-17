@@ -93,6 +93,7 @@ Inputs:
 * Channel : Slack channel
 * File-Path : result.txt path
 * Log-File-Path : log.txt path
+* Out-Folder : output file folder (create if not exists)
 
 Outputs:
 * result.txt (overwrite the previous one)
