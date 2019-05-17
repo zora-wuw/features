@@ -7,13 +7,14 @@
 * f0005: Count the number of connections between two hashtags
 * f0006: Aggregate all grouped csv into one csv
 * f0007: Get accurate location based on user location
+* f0008: Check the record number of collection and send message to Slack 
 
 ## Detailed Description
 ### f0002: Create Index
 Create Text Index for all MongoDB collections
 
 Inputs:
-* IP : MongoDB IP
+* IP : MongoDB server IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name.
 * Create-Index : 
@@ -41,7 +42,7 @@ Outputs:
 Create a csv file with two columns (hashtag, user_location) for each collection
 
 Inputs:
-* IP : MongoDB IP
+* IP : MongoDB server IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
 
@@ -52,7 +53,7 @@ Outputs:
 Create csv file with three columns (hashtag, linked_hashtag, number) for each collection
 
 Inputs:
-* IP : MongoDB IP
+* IP : MongoDB server IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name.
 
@@ -81,3 +82,18 @@ Inputs:
 
 Outputs:
 * CSV files
+
+### f0008: Check the record number of collection and send message to Slack 
+Send a message to Slack only if the number of record is reduced or the same compared with the last run
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* Slack-Token : Slack API token
+* Channel : Slack channel
+* File-Path : result.txt path
+* Log-File-Path : log.txt path
+
+Outputs:
+* result.txt (overwrite the previous one)
+* log.txt
