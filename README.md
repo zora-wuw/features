@@ -10,6 +10,7 @@
 * f0008: Monitor NIFI
 * f0009: MongoDB Insertions(JSON)
 * f0011: MongoDB Backup
+* f0012: Count the number of hashtag daily
 
 ## Detailed Description
 ### f0002: Create Index
@@ -18,7 +19,7 @@ Create Text Index for all MongoDB collections
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
-* Contain-String : filter the collection by the contained string in the name.
+* Contain-String : filter the collection by the contained string in the name
 * Create-Index : 
   - If "1", then create index.
   - If "2", it lists the collections that require index.
@@ -31,11 +32,11 @@ Inputs:
 * Output-Folder : write output files into this path
 * Language : 
   - If "1", keep the rows with English letters and numbers
-  - If "2", keep all rows.
+  - If "2", keep all rows
   - If "3", keep the rows with non-English letters
 * Delete-None : 
-  - If "1", the rows with "none" value will be deleted.
-  - If "2", the rows with "none" value will not be deleted.
+  - If "1", the rows with "none" value will be deleted
+  - If "2", the rows with "none" value will not be deleted
   
 Outputs:
 * CSV files 
@@ -57,7 +58,7 @@ Create csv file with three columns (hashtag, linked_hashtag, number) for each co
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
-* Contain-String : filter the collection by the contained string in the name.
+* Contain-String : filter the collection by the contained string in the name
 
 Outputs:
 * CSV files
@@ -119,5 +120,16 @@ Inputs:
 * Start-Str : start string of the collection name
 
 Outputs:
-* gzip file
+* gzip files
 
+### f0012: Count the number of hashtag daily
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* Contain-String : filter the collection by the contained string in the name
+* Output-Path : write output files into this path
+
+Outputs:
+* CSV files
