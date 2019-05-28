@@ -25,12 +25,11 @@ array=()
 
 # get all old collections based on year and week
 for col in $collections; do
+  echo $col
   if [[ $col == $Str ]]; then
     year=${col:0:4}
     left=${col#*_W}
     week=${left%_T*}
-    echo $year
-    echo $week
     if [[ $year -lt $currentyear ]]; then
       array+=($col)
     else
