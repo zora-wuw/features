@@ -9,7 +9,6 @@ Str=$(awk -F "=" '/Start_Str/ {print $2}' config.ini)
 
 # get all collections name
 collections=$(mongo $IP:$(($Port))/$DB --quiet --eval "db.getCollectionNames().join(',')" | sed 's/,/ /g')
-echo $collections
 
 # get current timestamp
 currenttimestamp=$(date +%s000)
@@ -39,6 +38,8 @@ for col in $collections; do
     fi
   fi
 done
+
+echo $array
 
 # dump collection and drop it after
 for i in ${array[@]}; do
