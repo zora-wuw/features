@@ -106,7 +106,7 @@ Dump collections and drop them optional
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
-* DB : database name
+* DB-Name : database name
 * Drop-Collection : if "1", then drop the collection after dump finished
 * Start-Str : start string of the collection name
 
