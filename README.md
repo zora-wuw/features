@@ -11,6 +11,7 @@
 * f0009: MongoDB Insertions(JSON)
 * f0011: MongoDB Backup
 * f0012: Count the number of hashtag daily
+* f0013: Concatenate files
 
 ## Detailed Description
 ### f0002: Create Index
@@ -133,3 +134,14 @@ Inputs:
 
 Outputs:
 * CSV files
+
+### f0013: Concatenate files
+This is a bash script file
+
+Inputs:
+* $1 : input folder - read files from this path
+* $2 : start name - filter the files by the started string in the name
+* $3 : output file - name of the output file
+
+Outputs:
+* CSV file
