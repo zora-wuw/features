@@ -9,6 +9,7 @@
 * f0007: Get accurate location based on user location
 * f0008: Monitor NIFI
 * f0009: MongoDB Insertions(JSON)
+* f0010: Jenkins Job Setup
 * f0011: MongoDB Backup
 * f0012: Count the number of hashtag daily
 * f0013: Concatenate files
