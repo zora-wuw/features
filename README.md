@@ -8,6 +8,7 @@
 * f0006: Aggregate all grouped csv into one csv
 * f0007: Get accurate location based on user location
 * f0008: Monitor NIFI
+* f0011: MongoDB Backup
 
 ## Detailed Description
 ### f0002: Create Index
@@ -98,3 +99,17 @@ Inputs:
 Outputs:
 * result.txt (overwrite the previous one)
 * log.txt
+
+### f0011: MongoDB Backup
+Dump collections and drop them optional
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB : database name
+* Drop-Collection : if "1", then drop the collection after dump finished
+* Start-Str : start string of the collection name
+
+Outputs:
+* gzip file
+
