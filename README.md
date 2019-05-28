@@ -8,6 +8,7 @@
 * f0006: Aggregate all grouped csv into one csv
 * f0007: Get accurate location based on user location
 * f0008: Monitor NIFI
+* f0009: MongoDB Insertions(JSON)
 * f0011: MongoDB Backup
 
 ## Detailed Description
@@ -99,6 +100,13 @@ Inputs:
 Outputs:
 * result.txt (overwrite the previous one)
 * log.txt
+
+### f0009: MongoDB Insertions(JSON)
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* Folder-Path : read all JSON files from this path
 
 ### f0011: MongoDB Backup
 Dump collections and drop them optional
