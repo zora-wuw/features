@@ -29,6 +29,8 @@ for col in $collections; do
     year=${col:0:4}
     left=${col#*_W}
     week=${left%_T*}
+    echo $year
+    echo $week
     if [[ $year -lt $currentyear ]]; then
       array+=($col)
     else
