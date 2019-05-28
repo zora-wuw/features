@@ -43,6 +43,7 @@ done
 for i in ${array[@]}; do
   echo "ready to dump collection '$i'"
   if [ $Drop == "1" ]; then
+    echo "Drop the collection"
     #mongodump --archive=mongodb_$i.gz --gzip --host $IP --port $Port --db $DB -c $i && mongo $IP:$(($Port))/$DB --eval "db['$i'].drop()" && echo "collection '$i' done: already dumped and droped from database"
   else
     mongodump --archive=mongodb_$i.gz --gzip --host $IP --port $Port --db $DB -c $i && echo "collection '$i' done: already dumped from database"
