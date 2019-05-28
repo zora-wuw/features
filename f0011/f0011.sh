@@ -26,7 +26,7 @@ array=()
 # get all old collections based on year and week
 for col in $collections; do
   echo $col
-  if [ $col == $Str ]; then
+  if [ $col -eq $Str ]; then
     year=${col:0:4}
     left=${col#*_W}
     week=${left%_T*}
