@@ -21,7 +21,7 @@ echo "current year: "$currentyear
 currentweek=$(((((($currenttimestamp-1546214400000))/604800000))+1))
 echo "current week: " $currentweek
 
-array=()
+#array=()
 
 # get all old collections based on year and week
 for col in $collections; do
