@@ -5,7 +5,7 @@ IP=$(awk -F "=" '/IP/ {print $2}' config.ini)
 Port=$(awk -F "=" '/MongoDB-Port/ {print $2}' config.ini)
 DB=$(awk -F "=" '/DB-Name/ {print $2}' config.ini)
 Drop=$(awk -F "=" '/Drop-Collection/ {print $2}' config.ini)
-Str=$(awk -F "=" '/Start_Str/ {print $2}' config.ini)
+Str=$(awk -F "=" '/Start-Str/ {print $2}' config.ini)
 
 # get all collections name
 collections=$(mongo $IP:$(($Port))/$DB --quiet --eval "db.getCollectionNames().join(',')" | sed 's/,/ /g')
@@ -25,16 +25,12 @@ array=()
 
 # get all old collections based on year and week
 for col in $collections; do
-  if [[ $col == 20* ]]; then
+  if [[ $col == $Str ]]; then
     year=${col:0:4}
     left=${col#*_W}
     week=${left%_T*}
-    echo $year
-    echo $left
-    echo $week
     if [[ $year -lt $currentyear ]]; then
       array+=($col)
-      echo $array
     else
       if [[ $week -lt $currentweek ]]; then
         array+=($col)
@@ -42,8 +38,6 @@ for col in $collections; do
     fi
   fi
 done
-
-echo $array
 
 # dump collection and drop it after
 for i in ${array[@]}; do
