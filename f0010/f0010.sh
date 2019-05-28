@@ -1,5 +1,6 @@
-#!/bin/bash
+# This copied drived from the work by https://gist.github.com/cenkalti
 
+#!/bin/bash
 # Setup
 #
 # - Create a new Jenkins Job
