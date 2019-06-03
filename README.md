@@ -149,7 +149,6 @@ Outputs:
 * CSV file
 
 ### f0014: Collection Level Report
-This is a bash script file.
 Restore archived collection file from the folder and calculate.
 * Number of records in each collection
 * Status of Index in each collection
@@ -161,3 +160,5 @@ Inputs:
 
 Outputs:
 * CSV file
+  - Number of records in each collection
+  - Status of Index in each collection
