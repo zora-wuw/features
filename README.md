@@ -13,6 +13,7 @@
 * f0011: MongoDB Backup
 * f0012: Count the number of hashtag daily
 * f0013: Concatenate files
+* f0014: Collection Level Report
 
 ## Detailed Description
 ### f0002: Create Index
@@ -142,6 +143,20 @@ This is a bash script file
 Inputs:
 * $1 : input folder - read files from this path
 * $2 : start name - filter the files by the started string in the name
+* $3 : output file - name of the output file
+
+Outputs:
+* CSV file
+
+### f0014: Collection Level Report
+This is a bash script file.
+Restore archived collection file from the folder and calculate.
+* Number of records in each collection
+* Status of Index in each collection
+
+Inputs:
+* $1 : input folder - read files from this path
+* $2 : database name
 * $3 : output file - name of the output file
 
 Outputs:
