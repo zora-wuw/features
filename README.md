@@ -149,7 +149,7 @@ Outputs:
 * CSV file
 
 ### f0014: Collection Level Report
-Restore archived collection file from the folder and calculate
+#### f0014-a: Restore archived collection file from the folder and calculate
 
 Inputs:
 * $1 : input folder - read files from this path
@@ -160,3 +160,11 @@ Outputs:
 * CSV file
   - Number of records in each collection
   - Status of Index in each collection
+ 
+#### f0014-b: Get top 100 hashtags for each csv file
+
+Inputs:
+* Input-Folder : read files from this path
+
+Outputs:
+* CSV file
