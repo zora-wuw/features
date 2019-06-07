@@ -162,12 +162,12 @@ Outputs:
   - Status of Index in each collection
  
 #### f0014-b: Get top 100 hashtags from MongoDB
+Generate one csv file for each collection
 
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
-* Output-File-Aus : file name for "Australia" colletions
-* Output-File-World : file name for "Other" collections
+* DB-Name : database name
 
 Outputs:
 * CSV files
