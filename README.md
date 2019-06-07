@@ -161,10 +161,13 @@ Outputs:
   - Number of records in each collection
   - Status of Index in each collection
  
-#### f0014-b: Get top 100 hashtags for each csv file
+#### f0014-b: Get top 100 hashtags from MongoDB
 
 Inputs:
-* Input-Folder : read files from this path
+* IP : MongoDB server IP
+* MongoDB-Port
+* Output-File-Aus : file name for "Australia" colletions
+* Output-File-World : file name for "Other" collections
 
 Outputs:
-* CSV file
+* CSV files
