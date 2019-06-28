@@ -171,3 +171,16 @@ Inputs:
 
 Outputs:
 * CSV files
+
+### f0015: Geoname
+Get geoname information based on user location
+
+Inputs:
+* Flag : 
+  - If "Other" collection, then "1".
+  - If "Australia" collection, then "2".
+* Input-File
+* Output-File
+* Ratio-Value
+* Column-Number : choose which column in input file to process the geoname
+
