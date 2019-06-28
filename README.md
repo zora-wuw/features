@@ -14,6 +14,7 @@
 * f0012: Count the number of hashtag daily
 * f0013: Concatenate files
 * f0014: Collection Level Report
+* f0015: Geoname
 
 ## Detailed Description
 ### f0002: Create Index
