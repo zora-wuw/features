@@ -1,0 +1,205 @@
+city,state,country,geonameid
+Whyalla,South Australia,Australia,2058430
+Rockingham,Western Australia,Australia,2062338
+Prospect,South Australia,Australia,2062944
+Port Hedland,Western Australia,Australia,2063042
+Perth,Western Australia,Australia,2063523
+Murray Bridge,South Australia,Australia,2065176
+Mount Isa,Queensland,Australia,2065594
+Morphett Vale,South Australia,Australia,2065740
+Mandurah,Western Australia,Australia,2067119
+Kwinana,Western Australia,Australia,2068079
+Kalgoorlie,Western Australia,Australia,2068823
+Gosnells,Western Australia,Australia,2070571
+Geraldton,Western Australia,Australia,2070998
+Gawler,South Australia,Australia,2071059
+Fremantle,Western Australia,Australia,2071223
+Darwin,Northern Territory,Australia,2073124
+Busselton,Western Australia,Australia,2075265
+Bunbury,Western Australia,Australia,2075432
+Armadale,Western Australia,Australia,2077579
+Alice Springs,Northern Territory,Australia,2077895
+Albany,Western Australia,Australia,2077963
+Adelaide,South Australia,Australia,2078025
+Woodridge,Queensland,Australia,2143069
+Wodonga,Victoria,Australia,2143285
+Werribee,Victoria,Australia,2144095
+Warrnambool,Victoria,Australia,2144528
+Wantirna South,Victoria,Australia,2144728
+Wangaratta,Victoria,Australia,2144764
+Wagga Wagga,New South Wales,Australia,2145110
+Traralgon,Victoria,Australia,2146108
+Townsville,Queensland,Australia,2146142
+Toowoomba,Queensland,Australia,2146268
+Thornbury,Victoria,Australia,2146793
+Thomastown,Victoria,Australia,2146827
+Tarneit,Victoria,Australia,2147357
+Taree,New South Wales,Australia,2147381
+Tamworth,New South Wales,Australia,2147497
+Sydney,New South Wales,Australia,2147714
+Surfers Paradise,Queensland,Australia,2147849
+Sunnybank,Queensland,Australia,2147892
+Sunbury,Victoria,Australia,2147914
+Port Stephens,New South Wales,Australia,2148398
+Springvale,Victoria,Australia,2148591
+Southport,Queensland,Australia,2148928
+South Grafton,New South Wales,Australia,2148997
+Shepparton,Victoria,Australia,2149645
+Seaford,Victoria,Australia,2149975
+Saint Kilda,Victoria,Australia,2150660
+Saint Albans,Victoria,Australia,2150717
+Rowville,Victoria,Australia,2150894
+Rockhampton,Queensland,Australia,2151437
+Richmond,Victoria,Australia,2151649
+Reservoir,Victoria,Australia,2151716
+Queanbeyan,New South Wales,Australia,2152286
+Quakers Hill,New South Wales,Australia,2152329
+Preston,Victoria,Australia,2152558
+Port Macquarie,New South Wales,Australia,2152659
+Point Cook,Victoria,Australia,2152819
+Pakenham South,Victoria,Australia,2153951
+Orange,New South Wales,Australia,2154219
+Nowra,New South Wales,Australia,2154787
+Northcote,Victoria,Australia,2155001
+Noble Park,Victoria,Australia,2155204
+Newcastle,New South Wales,Australia,2155472
+Nerang,Queensland,Australia,2155542
+Narre Warren,Victoria,Australia,2155718
+Narangba,Queensland,Australia,2155787
+Mulgrave,Victoria,Australia,2156340
+Mount Martha,Victoria,Australia,2156578
+Mount Gambier,South Australia,Australia,2156643
+Mount Eliza,Victoria,Australia,2156663
+Mosman,New South Wales,Australia,2156813
+Mornington,Victoria,Australia,2156878
+Morayfield,Queensland,Australia,2156934
+Moe,Victoria,Australia,2157343
+Mill Park,Victoria,Australia,2157635
+Mildura,Victoria,Australia,2157698
+Melton,Victoria,Australia,2158151
+Melbourne,Victoria,Australia,2158177
+Maryborough,Queensland,Australia,2158562
+Marrickville,New South Wales,Australia,2158626
+Maroubra,New South Wales,Australia,2158651
+Maitland,New South Wales,Australia,2159045
+Mackay,Queensland,Australia,2159220
+Liverpool,New South Wales,Australia,2159851
+Lismore,New South Wales,Australia,2160063
+Lilydale,Victoria,Australia,2160188
+Launceston,Tasmania,Australia,2160517
+Lara,Victoria,Australia,2160560
+Langwarrin,Victoria,Australia,2160582
+Lalor,Victoria,Australia,2160706
+Keysborough,Victoria,Australia,2161532
+Kew,Victoria,Australia,2161540
+Katoomba,New South Wales,Australia,2161776
+Hornsby,New South Wales,Australia,2163137
+Hobart,Tasmania,Australia,2163355
+Hawthorn South,Victoria,Australia,2163776
+Hampton Park,Victoria,Australia,2163990
+Griffith,New South Wales,Australia,2164422
+Greensborough,Victoria,Australia,2164515
+Granville,New South Wales,Australia,2164691
+Goulburn,New South Wales,Australia,2164837
+Gold Coast,Queensland,Australia,2165087
+Glenroy,Victoria,Australia,2165200
+Glenferrie,Victoria,Australia,2165329
+Gladstone,Queensland,Australia,2165478
+Geelong,Victoria,Australia,2165798
+Frankston East,Victoria,Australia,2166143
+Frankston,Victoria,Australia,2166144
+Forster,New South Wales,Australia,2166309
+Essendon,Victoria,Australia,2167208
+Epping,Victoria,Australia,2167279
+Epping,New South Wales,Australia,2167280
+Engadine,New South Wales,Australia,2167312
+Eltham,Victoria,Australia,2167445
+Echuca,Victoria,Australia,2167817
+Earlwood,New South Wales,Australia,2167949
+Dubbo,New South Wales,Australia,2168305
+Doncaster East,Victoria,Australia,2168605
+Doncaster,Victoria,Australia,2168607
+Devonport,Tasmania,Australia,2168943
+Deer Park,Victoria,Australia,2169145
+Deception Bay,Queensland,Australia,2169220
+Dandenong,Victoria,Australia,2169460
+Cronulla,New South Wales,Australia,2169956
+Cranbourne,Victoria,Australia,2170078
+Cranbourne,Victoria,Australia,2170079
+Craigieburn,Victoria,Australia,2170089
+Coffs Harbour,New South Wales,Australia,2171085
+Coburg,Victoria,Australia,2171168
+Clayton,Victoria,Australia,2171400
+Wollongong,New South Wales,Australia,2171507
+Cessnock,New South Wales,Australia,2171845
+Castle Hill,New South Wales,Australia,2172111
+Carrum Downs,Victoria,Australia,2172191
+Carnegie,Victoria,Australia,2172264
+Carlingford,New South Wales,Australia,2172303
+Caringbah,New South Wales,Australia,2172311
+Canberra,Australian Capital Territory,Australia,2172517
+Camberwell,Victoria,Australia,2172686
+Caloundra,Queensland,Australia,2172710
+Cairns,Queensland,Australia,2172797
+Caboolture,Queensland,Australia,2172832
+Burnie,Tasmania,Australia,2173125
+Bundaberg,Queensland,Australia,2173323
+Buderim,Queensland,Australia,2173605
+Brunswick,Victoria,Australia,2173741
+Broken Hill,New South Wales,Australia,2173911
+Brisbane,Queensland,Australia,2174003
+Boronia,Victoria,Australia,2174580
+Blacktown,New South Wales,Australia,2175411
+Berwick,Victoria,Australia,2176031
+Bendigo,Victoria,Australia,2176187
+Baulkham Hills,New South Wales,Australia,2176592
+Bathurst,New South Wales,Australia,2176632
+Banora Point,New South Wales,Australia,2176934
+Bankstown,New South Wales,Australia,2176947
+Ballarat,Victoria,Australia,2177091
+Auburn,New South Wales,Australia,2177513
+Ashfield,New South Wales,Australia,2177565
+Armidale,New South Wales,Australia,2177671
+Albury,New South Wales,Australia,2178174
+South Brisbane,Queensland,Australia,2207259
+Cheltenham,Victoria,Australia,2207618
+Randwick,New South Wales,Australia,2208285
+Dee Why,New South Wales,Australia,2208305
+Umina,New South Wales,Australia,2208313
+Palmerston,Northern Territory,Australia,6301965
+Bracken Ridge,Queensland,Australia,6943558
+North Ryde,New South Wales,Australia,7281782
+Hoppers Crossing,Victoria,Australia,7281807
+Logan City,Queensland,Australia,7281838
+Carindale,Queensland,Australia,7281839
+Paramatta,New South Wales,Australia,7281840
+Ferntree Gully,Victoria,Australia,7281850
+City of Parramatta,New South Wales,Australia,7302259
+Adelaide Hills,South Australia,Australia,7302628
+Canning Vale,Western Australia,Australia,7302631
+Glenmore Park,New South Wales,Australia,7302642
+Glen Iris,Victoria,Australia,7932612
+Balwyn North,Victoria,Australia,7932629
+Carnegie,Victoria,Australia,7932636
+Malvern East,Victoria,Australia,7932638
+Brighton East,Victoria,Australia,7932646
+Booval,Queensland,Australia,7932654
+St Albans,Victoria,Australia,8015209
+Endeavour Hills,Victoria,Australia,8347325
+Clayton,Victoria,Australia,8347717
+Taylors Lakes,Victoria,Australia,8347847
+Roxburgh Park,Victoria,Australia,8347896
+Wyndham Vale,Victoria,Australia,8348078
+Willetton,Western Australia,Australia,8348101
+Thornbury,Victoria,Australia,8348734
+Thornlie,Western Australia,Australia,8349108
+Hillside,Victoria,Australia,8349243
+Bundoora,Victoria,Australia,8349381
+Forest Lake,Queensland,Australia,9957340
+Sunnybank Hills,Queensland,Australia,9957350
+Narre Warren South,Victoria,Australia,9972518
+Dandenong North,Victoria,Australia,9972522
+Frankston South,Victoria,Australia,9972527
+Sunshine West,Victoria,Australia,9972578
+Altona Meadows,Victoria,Australia,9972579
+West Pennant,New South Wales,Australia,9972964
