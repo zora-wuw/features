@@ -184,4 +184,12 @@ Inputs:
 * Output-File
 * Ratio-Value
 * Column-Number : choose which column in input file to process the geoname
+* World-Cities-File : world-cities.csv in supporting-files
+* World-States-File : world-states.csv in supporting-files
+* World-Countries-File : world-countries.csv in supporting-files
+* AU-Cities-File : au-cities.csv in supporting-files
+* AU-States-File : au-states.csv in supporting-files
+* AU-Countries-File : au-country.csv in supporting-files
 
+Outputs:
+* CSV files
