@@ -13,7 +13,7 @@ for file in $folder/*mongodb_2019_W14_Twitter_Australia*.gz; do
   && echo "$count" \
   && index=`mongo $db_name --eval "printjson(db.$filename.getIndexes());" --quiet` \
   && echo "$index" \
-  && echo "$file, $count,$index"
+  && echo "$file, $count,$index" \
   && echo "$file, $count,$index" >> $output_file \
   && mongo $db_name --eval "db.$filename.drop()"
 
