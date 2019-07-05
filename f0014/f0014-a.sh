@@ -4,7 +4,7 @@ folder=$1
 db_name=$2
 output_file=$3
 
-for file in $folder/*.gz; do
+for file in $folder/*Australia*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   mongorestore --gzip --archive=$file \
