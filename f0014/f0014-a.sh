@@ -6,8 +6,8 @@ output_file=$3
 
 for file in $folder/*Australia*.gz; do
   filename=$(basename -- "$file")
-  filename="${filename%.*}"
-  subfilename="${filename#*mongodb_}"
+  filename1="${filename%.*}"
+  subfilename="${filename1#*mongodb_}"
   mongorestore --gzip --archive=$file \
   && count=`mongo $db_name --eval "printjson(db.$subfilename.count());" --quiet` \
   && index=`mongo $db_name --eval "printjson(db.$subfilename.getIndexes());" --quiet` \
