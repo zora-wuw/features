@@ -8,7 +8,7 @@ for file in $folder/*2019_W14_Twitter_Australia*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   subfilename="${filename#*mongodb_}"
-  mongorestore --gzip --archive=$subfilename \
+  mongorestore --gzip --archive=$file \
   && count=`mongo $db_name --eval "printjson(db.$subfilename.count());" --quiet` \
   && index=`mongo $db_name --eval "printjson(db.$subfilename.getIndexes());" --quiet` \
   && echo "$filename, $count,$index" >> $output_file \
