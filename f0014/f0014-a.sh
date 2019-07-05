@@ -5,8 +5,8 @@ db_name=$2
 output_file=$3
 collection_name=$4
 
-mongo $db_name --eval "printjson(db.getCollection($collection_name).count());" --quiet
-mongo $db_name --eval "printjson(db.getCollection($collection_name).getIndexes());" --quiet
+mongo $db_name --eval "printjson(db.getCollection('$collection_name').count());" --quiet
+mongo $db_name --eval "printjson(db.getCollection('$collection_name').getIndexes());" --quiet
 
 
 
