@@ -4,7 +4,7 @@ folder=$1
 db_name=$2
 output_file=$3
 
-for file in $folder/*2019_W14_Twitter_Australia*.gz; do
+for file in $folder/*Australia*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   subfilename="${filename#*mongodb_}"
