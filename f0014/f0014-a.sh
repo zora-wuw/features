@@ -5,6 +5,7 @@ db_name=$2
 output_file=$3
 
 for file in $folder/*Australia*.gz; do
+  echo "$file"
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   subfilename="${filename#*mongodb_}"
