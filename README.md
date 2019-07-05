@@ -112,6 +112,9 @@ Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
 * Folder-Path : read all JSON files from this path
+* DB-Name : database name
+* Contain-String : filter the JSON files by the contained string in the name
+* JSON-Key : key for the array (if no key then set it to "none" )
 
 ### f0011: MongoDB Backup
 Dump collections and drop them optional
