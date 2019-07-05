@@ -8,7 +8,7 @@ for file in $folder/*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   mongorestore --gzip --archive=$file \
-  && let count=`mongo $db_name --eval "printjson(db.$filename.count());" --quiet` \
+  && count=`mongo $db_name --eval "printjson(db.$filename.count());" --quiet` \
   && index=`mongo $db_name --eval "printjson(db.Twitter_2017.getIndexes());" --quiet` \
   && ind=$(echo $index | jq -r '.[].name') \
   && indexname=$(echo $ind | tr ' ' ';') \
