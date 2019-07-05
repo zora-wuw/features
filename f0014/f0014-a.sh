@@ -9,6 +9,7 @@ for file in $folder/*mongodb_2019_W14_Twitter_Australia*.gz; do
   filename="${filename%.*}"
   filename="${filename#*mongodb_}"
   mongorestore --gzip --archive=$file \
+  && echo "part1" \
   && count=`mongo $db_name --eval "printjson(db.$filename.count());" --quiet` \
   && echo "$count" \
   && index=`mongo $db_name --eval "printjson(db.$filename.getIndexes());" --quiet` \
