@@ -3,8 +3,9 @@
 folder=$1
 db_name=$2
 py_name=$3
+prefix=$4
 
-for file in $folder/mongodb_*.gz; do
+for file in $folder/"$prefix"*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   filename="${filename#*mongodb_}"
