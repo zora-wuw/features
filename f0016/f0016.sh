@@ -3,7 +3,7 @@
 folder=$1
 db_name=$2
 
-for file in $folder/*.gz; do
+for file in $folder/mongodb_*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   mongorestore --gzip --archive=$file \
