@@ -10,5 +10,5 @@ for file in $folder/mongodb_2019_W14_Twitter_Australia*.gz; do
   filename="${filename#*mongodb_}"
   mongorestore --gzip --archive=$file \
   && python3 $py_name $filename $db_name\
-  && mongo $db_name --eval "db.$filename.drop()"
+  && mongo $db_name --eval "db.getCollection('$filename').drop()"
 done
