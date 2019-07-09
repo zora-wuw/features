@@ -199,3 +199,27 @@ Inputs:
 
 Outputs:
 * CSV files
+
+### f0016: Get User Location per Collection
+Get unique user location csv file for each collection
+
+#### f0016-a: Restore archived collection file, Run f0016-b and Drop the collection
+
+Inputs:
+* $1 : input folder - read files from this path
+* $2 : database name
+* $3 : python file - name of the file
+* $4 : prefix - prefix of the collection files' names
+
+Output:
+* CSV files
+
+#### f0016-b: Get unique user location csv file for each collection
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* Output-Folder : output folder ended with "/"
+
+Outputs:
+* CSV files
