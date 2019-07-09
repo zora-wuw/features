@@ -73,6 +73,9 @@ Aggregate every two csv files into one csv file at each time, after f0003 is com
 Inputs:
 * Input-Folder : read all files from this path
 * Output-Folder : write output files into this path
+* Column-List : column name, if more than one, then separated by ","
+* Column-Type-List : column name's type, if more than one, then separated by ","
+                     Options: "string","int","float"
 
 Outputs:
 * CSV files
