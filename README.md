@@ -15,6 +15,7 @@
 * f0013: Concatenate files
 * f0014: Collection Level Report
 * f0015: Geoname
+* f0016: Get User Location per Collection
 
 ## Detailed Description
 ### f0002: Create Index
