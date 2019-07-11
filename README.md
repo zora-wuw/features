@@ -16,6 +16,7 @@
 * f0014: Collection Level Report
 * f0015: Geoname
 * f0016: Get User Location per Collection
+* f0017: Convert CSV to JSON array
 
 ## Detailed Description
 ### f0002: Create Index
@@ -224,3 +225,13 @@ Inputs:
 
 Outputs:
 * CSV files
+
+### f0017: Convert CSV to JSON array
+one file per time
+
+Inputs:
+* CSV-File-Path : read file from this path
+* JSON-File-Path : write into this file
+
+Outputs:
+* JSON file
