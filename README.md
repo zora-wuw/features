@@ -120,6 +120,8 @@ Inputs:
 * DB-Name : database name
 * Contain-String : filter the JSON files by the contained string in the name
 * JSON-Key : key for the array (if no key then set it to "none" )
+* User-Name : MongoDB user name
+* Psword : MongoDB user password
 
 ### f0011: MongoDB Backup
 Dump collections and drop them optional
