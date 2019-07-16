@@ -232,8 +232,9 @@ Outputs:
 one file per time
 
 Inputs:
-* CSV-File-Path : read file from this path
-* JSON-File-Path : write into this file
+* CSV-Folder-Path : read file from this folder path
+* JSON-Folder-Path : write into this folder
+* Start-String : String that filenames start with
 
 Outputs:
-* JSON file
+* JSON files
