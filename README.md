@@ -229,7 +229,7 @@ Outputs:
 * CSV files
 
 ### f0017: Convert CSV to JSON array
-one file per time
+process files with same start string each time
 
 Inputs:
 * CSV-Folder-Path : read file from this folder path
