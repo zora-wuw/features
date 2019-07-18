@@ -11,9 +11,9 @@ new_db_name=$7
 for file in $folder/"$prefix"*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
-  year=${filename:0:4}
-  left=${filename#*_W}
-  week=${left%_T*}
+  year="${filename:0:4}"
+  left="${filename#*_W}"
+  week="${left%_T*}"
   if [[ $year -eq $latest_year ]]; then
     if [[ $week -gt $latest_week ]]; then
       mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
