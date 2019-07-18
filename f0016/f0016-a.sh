@@ -10,6 +10,7 @@ for file in $folder/"$prefix"*.gz; do
   filename="${filename%.*}"
   filename="${filename#*mongodb_}"
   mongorestore --gzip --archive=$file \
-  && python3 $py_name $filename $db_name\
+  && python3 $py_name $filename \
+  && echo $filename > geoname_latest_collection.txt \
   && mongo $db_name --eval "db.getCollection('$filename').drop()"
 done
