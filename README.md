@@ -228,6 +228,17 @@ Inputs:
 Outputs:
 * CSV files
 
+#### f0016-c: Get new user location
+
+Inputs:
+* Input-Folder : read files from this path
+* Output-Folder : output folder ended without "/"
+* Geo-Aus-File
+* Geo-World-File 
+
+Outputs:
+* CSV files
+
 ### f0017: Convert CSV to JSON array
 process files with same start string each time
 
