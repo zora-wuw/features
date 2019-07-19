@@ -11,6 +11,8 @@ for file in $folder/*Australia*.gz; do
   year=${filename:0:4}
   left=${filename#*_W}
   week=${left%_T*}
+  echo $year
+  echo $week
   if [ "$year" -eq "2018" ]; then
     if [ "$week" -gt "51" ]; then
       mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
