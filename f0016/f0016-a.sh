@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-folder=$1
-db_name=$2
-py_name=$3
-prefix=$4
-latest_year=$5
-latest_week=$6
-new_db_name=$7
+latest_year=$1
+latest_week=$2
+db_name=$3
+new_db_name=$4
+prefix=$5
+py_name=$6
+folder=$7
 
 for file in $folder/"$prefix"*.gz; do
   filename=$(basename -- "$file")
