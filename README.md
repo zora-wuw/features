@@ -17,6 +17,7 @@
 * f0015: Geoname
 * f0016: Get User Location per Collection
 * f0017: Convert CSV to JSON array
+* f0018: Add new column in CSV
 
 ## Detailed Description
 ### f0002: Create Index
@@ -249,3 +250,14 @@ Inputs:
 
 Outputs:
 * JSON files
+
+### f0018: Add new column in CSV
+
+Inputs:
+* Input-File : csv file
+* Output-File : csv file
+* Column-Name
+* Split-Character
+
+Outputs:
+* CSV file
