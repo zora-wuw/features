@@ -2,7 +2,7 @@
 
 folder=$1
 
-for file in $folder/*.gz; do
+for file in $folder/*Australia*.gz; do
   echo $file
   filename=$(basename -- "$file")
   filename="${filename%.*}"
