@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-latest_year=$1
-latest_week=$2
-db_name=$3
-new_db_name=$4
-prefix=$5
-py_name=$6
-folder=$7
+latest_year=$(awk -F "=" '/Latest-Year/ {print $2}' config.ini)
+latest_week=$(awk -F "=" '/Latest_Week/ {print $2}' config.ini)
+db_name=$(awk -F "=" '/DB-Name/ {print $2}' config.ini)
+new_db_name=$(awk -F "=" '/New-DB-Name/ {print $2}' config.ini)
+prefix=$(awk -F "=" '/Prefix/ {print $2}' config.ini)
+py_name=$(awk -F "=" '/Py-Name/ {print $2}' config.ini)
+folder=$(awk -F "=" '/Folder/ {print $2}' config.ini)
 
 for file in $folder/"$prefix"*.gz; do
   filename=$(basename -- "$file")
