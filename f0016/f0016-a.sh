@@ -9,7 +9,6 @@ latest_year=$6
 latest_week=$7
 
 for file in $folder/"$prefix"*.gz; do
-  echo $file
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   year=${filename:0:4}
