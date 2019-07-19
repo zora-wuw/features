@@ -1,8 +1,9 @@
 #!/bin/bash
 
 folder=$1
+prefix=$2
 
-for file in $folder/*Australia*.gz; do
+for file in $folder/"$prefix"*.gz; do
   echo $file
   filename=$(basename -- "$file")
   filename="${filename%.*}"
