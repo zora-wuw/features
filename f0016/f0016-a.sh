@@ -2,11 +2,10 @@
 
 db_name=$1
 new_db_name=$2
-prefix=$3
-py_name=$4
-folder=$5
+py_name=$3
+folder=$4
 
-for file in $folder/"$prefix"*.gz; do
+for file in $folder/*Australia*.gz; do
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   year=${filename:0:4}
