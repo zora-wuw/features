@@ -6,6 +6,7 @@ py_name=$3
 folder=$4
 
 for file in $folder/*Australia*.gz; do
+  echo $file
   filename=$(basename -- "$file")
   filename="${filename%.*}"
   year=${filename:0:4}
@@ -13,19 +14,19 @@ for file in $folder/*Australia*.gz; do
   week=${left%_T*}
   echo $year
   echo $week
-  if [ "$year" -eq "2018" ]; then
-    if [ "$week" -gt "51" ]; then
-      mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
-      && python3 $py_name $filename $new_db_name \
-      && echo $filename > geoname_latest_collection.txt \
-      && mongo $new_db_name --eval "db.getCollection('$filename').drop()"
-    fi
-  else
-    if [ "$year" -gt "2018" ]; then
-      mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
-      && python3 $py_name $filename $new_db_name \
-      && echo $filename > geoname_latest_collection.txt \
-      && mongo $new_db_name --eval "db.getCollection('$filename').drop()"
-    fi
-  fi
+  # if [ "$year" -eq "2018" ]; then
+  #   if [ "$week" -gt "51" ]; then
+  #     mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
+  #     && python3 $py_name $filename $new_db_name \
+  #     && echo $filename > geoname_latest_collection.txt \
+  #     && mongo $new_db_name --eval "db.getCollection('$filename').drop()"
+  #   fi
+  # else
+  #   if [ "$year" -gt "2018" ]; then
+  #     mongorestore --gzip --archive=$file --nsFrom "${db_name}.*" --nsTo "${new_db_name}.*" \
+  #     && python3 $py_name $filename $new_db_name \
+  #     && echo $filename > geoname_latest_collection.txt \
+  #     && mongo $new_db_name --eval "db.getCollection('$filename').drop()"
+  #   fi
+  # fi
 done
