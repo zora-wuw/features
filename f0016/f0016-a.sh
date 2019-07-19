@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-db_name=$1
-new_db_name=$2
-py_name=$3
-folder=$4
+folder=$1
 
 for file in $folder/*Australia*.gz; do
   echo $file
