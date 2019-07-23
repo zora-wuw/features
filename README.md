@@ -18,6 +18,7 @@
 * f0016: Get User Location per Collection
 * f0017: Convert CSV to JSON array
 * f0018: Add new column in CSV
+* f0019: Convert XML to CSV
 
 ## Detailed Description
 ### f0002: Create Index
@@ -258,6 +259,15 @@ Inputs:
 * Output-File : csv file
 * Column-Name
 * Split-Character
+
+Outputs:
+* CSV file
+
+### f0019: Convert XML to CSV
+
+Inputs:
+* Input-File : xml file
+* Output-File : csv file
 
 Outputs:
 * CSV file
