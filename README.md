@@ -260,6 +260,9 @@ Inputs:
 * Output-File : csv file
 * Column-Name
 * Split-Character
+* Rename: 
+  - if "1", then append the original header as a prefix to the new header
+  - if "2", then do not append
 
 Outputs:
 * CSV file
