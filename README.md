@@ -19,6 +19,7 @@
 * f0017: Convert CSV to JSON array
 * f0018: Add new column in CSV
 * f0019: Convert XML to CSV
+* f0020: Convert CSV to Excel
 
 ## Detailed Description
 ### f0002: Create Index
@@ -271,3 +272,12 @@ Inputs:
 
 Outputs:
 * CSV file
+
+### f0020: Convert CSV to Excel
+
+Inputs:
+* Input-File : csv file
+* Output-File : xlsx file
+
+Outputs:
+* xlsx file
