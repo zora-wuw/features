@@ -280,7 +280,7 @@ Outputs:
 
 Inputs:
 * Input-File : csv file
-* Output-File : xlsx file
+* Output-File-Name : xlsx file name without extension
 
 Outputs:
 * xlsx file
