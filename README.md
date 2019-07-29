@@ -187,7 +187,8 @@ Outputs:
 * CSV files
 
 ### f0015: Geoname
-Get geoname information based on user location
+
+#### f0015-a: Get geoname information based on user location
 
 Inputs:
 * Flag : 
@@ -206,6 +207,17 @@ Inputs:
 
 Outputs:
 * CSV files
+
+#### f0015-b: Insert geoname information into MongoDB
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* AU-Geo-File : Australia geoname file (The output file from f0015-a)
+* World-Geo-File : World geoname file (The output file from f0015-a)
+* Collection-Name
+
 
 ### f0016: Get User Location per Collection
 Get unique user location csv file for each collection
