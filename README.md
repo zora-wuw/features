@@ -218,8 +218,6 @@ Inputs:
 * DB-Name : database name
 * AU-Geo-File : Australia geoname file (The output file from f0015-a)
 * World-Geo-File : World geoname file (The output file from f0015-a)
-* Collection-Name
-
 
 ### f0016: Get User Location per Collection
 Get unique user location csv file for each collection
