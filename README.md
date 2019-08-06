@@ -219,6 +219,19 @@ Inputs:
 * AU-Geo-File : Australia geoname file (The output file from f0015-a)
 * World-Geo-File : World geoname file (The output file from f0015-a)
 
+#### f0015-c: Collection Level Report (python version)
+Including : record count, index information, English tweets count, geoname count
+
+* Code Usage: f0015-c.py collection_name
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+
+Outputs:
+* JSON file
+
 ### f0016: Get User Location per Collection
 Get unique user location csv file for each collection
 
