@@ -28,6 +28,7 @@ Create Text Index for all MongoDB collections
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
+* DB-Name : database name
 * Contain-String : filter the collection by the contained string in the name
 * Create-Index : 
   - If "1", then create index.
