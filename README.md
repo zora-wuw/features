@@ -195,7 +195,8 @@ Inputs:
 * Flag : 
   - If "Other" collection, then "1".
   - If "Australia" collection, then "2".
-* Input-File
+* Input-Folder
+* Prefix : prefix of the collection files' names
 * Output-File
 * Ratio-Value
 * Column-Number : choose which column in input file to process the geoname
