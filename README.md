@@ -142,6 +142,8 @@ Outputs:
 
 ### f0012: Count the number of hashtag daily
 
+#### f0012-a: Without Geoname & f0012-b: With Geoname
+
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
