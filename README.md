@@ -234,6 +234,14 @@ Inputs:
 Outputs:
 * JSON file
 
+#### f0015-d: Delete empty geoname field from MongoDB
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* Contain-String : filter the collection by the contained string in the name
+
 ### f0016: Get User Location per Collection
 Get unique user location csv file for each collection
 
