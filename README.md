@@ -3,7 +3,7 @@
 * f0001: Download and Restore MongoDB archives 
 * f0002: Create Index
 * f0003: Group Rows in CSV Files
-* f0004: Read records from MongoDB and write into a csv file
+* f0004: Read records from MongoDB and write into a CSV file
 * f0005: Count the number of connections between two hashtags
 * f0006: Aggregate all grouped csv into one csv
 * f0007: Get accurate location based on user location
@@ -52,13 +52,28 @@ Inputs:
 Outputs:
 * CSV files 
 
-### f0004: Read records from MongoDB and write into a csv file
+### f0004: Export CSV from MongoDB
+
+#### f0004-a: Read selected records from MongoDB and write into a csv file
 Create a csv file with two columns (hashtag, user_location) for each collection
 
 Inputs:
 * IP : MongoDB server IP
 * MongoDB-Port
 * Contain-String : filter the collection by the contained string in the name
+
+Outputs:
+* CSV files
+
+#### f0004-b: Read all records from MongoDB and write into a csv file
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : Database name
+* User-Name : MongoDB user name
+* Psword : MongoDB password
+* Output-Folder : ended with "/"
 
 Outputs:
 * CSV files
