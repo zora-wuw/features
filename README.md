@@ -291,6 +291,8 @@ Outputs:
 
 ### f0018: Add new column in CSV
 
+#### f0018-a: Split one column and add to separate new columns
+
 Inputs:
 * Input-File : csv file
 * Output-File : csv file
@@ -302,6 +304,15 @@ Inputs:
 
 Outputs:
 * CSV file
+
+#### f0018-b: Add new columns based on file name
+
+Inputs:
+* Input-Folder : read csv files from this folder ended with "/"
+* Output-Folder : ended with "/"
+
+Outputs:
+* CSV files
 
 ### f0019: Convert XML to CSV
 
