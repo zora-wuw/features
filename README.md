@@ -20,6 +20,7 @@
 * f0018: Add new column in CSV
 * f0019: Convert XML to CSV
 * f0020: Convert CSV to Excel
+* f0021: Convert JSON to CSV
 
 ## Detailed Description
 ### f0002: Create Index
@@ -319,3 +320,13 @@ Inputs:
 
 Outputs:
 * xlsx file
+
+### f0021: Convert JSON to CSV
+
+Inputs:
+* Input-Folder : read json files from this folder ended with "/"
+* Output-File
+* Input-File : weekly_report.csv
+
+Outputs:
+* updated weekly_report.csv
