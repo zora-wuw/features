@@ -1,6 +1,6 @@
 #code starts at line 212. Make sure setwd() is commented out.
 #setwd('C:/Users/lgurrstephen/Desktop/testlife')
-source('funs.r')
+source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
 library(reshape2)
@@ -52,7 +52,7 @@ beep(5)
 
 
 
-#several pre-processing functions. See 'funs.R' for more detail. Essentially:
+#several pre-processing functions. See 'f0022-b.R' for more detail. Essentially:
 #tbl_cln combines different excel files if they have been split (the census
 #splits up tables with more than 200 columns)
 #col_edit keeps columns with names matching regex given in impt.txt
