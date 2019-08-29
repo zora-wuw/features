@@ -21,6 +21,8 @@ opts <- 'import_options'
 db <- fromJSON(paste0(supp_files,'mongo.txt'))
 yr <- db$year
 file_agg <- 'aggregate_columns.txt'
+local_con <- db$connect_local
+output_to_db <- db$output_to_db
 
 ##FILE LOCATIONS
 if (yr == "2011"){
@@ -119,29 +121,45 @@ t3_agg <- t3_agg[duds,]
 #what.folder.is.this.script.in()
 
 
-coll_names <- c('census_2016_sa1_count_agg',
-                'census_2016_sa1_count_notagg',
-                'census_2016_sa1_proportion_agg',
-                'census_2016_sa1_proportion_notagg')
+coll_names <- c('census_xxxx_sa1_count_agg',
+                'census_xxxx_sa1_count_notagg',
+                'census_xxxx_sa1_proportion_agg',
+                'census_xxxx_sa1_proportion_notagg')
+coll_names <- gsub('xxxx',yr,coll_names)
+
 t3_all <- list(t3_agg,t3,t3_scaled_agg,t3_scaled)
 
-usr <- db$usr
-pw <- db$pw
-host <- db$host
-datab <- db$database
-
-uri <- sprintf('mongodb://%s:%s@%s',usr,pw,host)
-
-for (i in 1:length(t3_all)){
-  con <- mongo(uri,collection=coll_names[i],db=datab)
-  con$count()
-  if (con$count()>0){
-    con$drop
-    print(paste('dropped',coll_names[i],'from',datab))
+if(output_to_db){
+  usr <- db$usr
+  pw <- db$pw
+  host <- db$host
+  datab <- db$database
+  
+  uri <- sprintf('mongodb://%s:%s@%s',usr,pw,host)
+  
+  if(local_con){
+    uri <- db$local_uri
   }
-  con$insert(t3_all[[i]])
-  con$disconnect()
-  print(paste('inserted',coll_names[i],'to',datab))
+  
+  print(paste('gonna connect to db',datab,'with \'connect to local\' set as',local_con))
+  for (i in 1:length(t3_all)){
+    con <- mongo(uri,collection=coll_names[i],db=datab)
+    con$count()
+    if (con$count()>0){
+      con$drop
+      print(paste('dropped',coll_names[i],'from',datab))
+    }
+    con$insert(t3_all[[i]])
+    con$disconnect()
+    print(paste('inserted',coll_names[i],'to',datab))
+  }
+} else {
+  if(!file.exists('images')){
+    dir.create('images')
+  }
+  for (i in 1:length(t3_all)){
+    write.csv(t3_all[[i]],file= paste0('images/',coll_names[i],'.csv'),
+              row.names = FALSE)
+    
+  }
 }
-
-
