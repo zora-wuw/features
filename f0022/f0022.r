@@ -347,11 +347,11 @@ file_agg <- 'age2016_v2.txt'
 if (yr == "2011"){
   pre <- '2011Census_'
   post <- '_VIC_SA1_short.csv'
-  subfol <- 'data/2011 Census BCP Statistical Areas Level 1 for VIC/VIC'
+  subfol <- 'data/2011_Census_BCP_Statistical_Areas_Level_1_for_VIC/VIC'
 } else if (yr == "2016"){
   pre <- '2016Census_'
   post <- '_AUS_SA1.csv'
-  subfol <- 'data/2016 Census GCP Statistical Area 1 for AUST'
+  subfol <- 'data/2016_Census_GCP_Statistical_Area_1_for_AUST'
 }
 
 #separate file with list of census tables to import
