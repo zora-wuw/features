@@ -3,6 +3,8 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
+.libpaths()
+
 library(reshape2)
 library(plyr)
 library(dplyr)
