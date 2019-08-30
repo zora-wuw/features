@@ -4,6 +4,13 @@ source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
 install.packages("reshape2")
+install.packages("plyr")
+install.packages("dplyr")
+install.packages("magrittr")
+install.packages("stringr")
+install.packages("mongolite")
+install.packages("jsonlite")
+install.packages("beepr")
 
 library(reshape2)
 library(plyr)
@@ -12,7 +19,7 @@ library(magrittr)
 library(stringr)
 library(mongolite)
 library(jsonlite)
-library(beepr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(beepr)
 
 ########  PART ONE   ######IMPORT CENSUS-------
 supp_files <- 'support/'
