@@ -3,7 +3,6 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
-install.packages("reshape2")
 library(reshape2)
 library(plyr)
 library(dplyr)
