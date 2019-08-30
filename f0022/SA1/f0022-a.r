@@ -3,7 +3,7 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
-.libPaths()
+.Library.site()
 
 library(reshape2)
 library(plyr)
