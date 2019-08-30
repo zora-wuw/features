@@ -3,16 +3,14 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
-.libpaths()
-
-library(reshape2)
-library(plyr)
-library(dplyr)
-library(magrittr)
-library(stringr)
-library(mongolite)
-library(jsonlite)
-library(beepr)
+library(reshape2, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(plyr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(dplyr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(magrittr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(stringr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(mongolite, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(jsonlite, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
+library(beepr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
 
 ########  PART ONE   ######IMPORT CENSUS-------
 supp_files <- 'support/'
