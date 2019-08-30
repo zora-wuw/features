@@ -24,6 +24,7 @@ file_agg <- 'aggregate_columns.txt'
 local_con <- db$connect_local
 output_to_db <- db$output_to_db
 
+print(yr)
 ##FILE LOCATIONS
 if (yr == "2011"){
   pre <- '2011Census_'
