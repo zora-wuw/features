@@ -3,15 +3,6 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
-install.packages("reshape2",dependencies=TRUE)
-install.packages("plyr",dependencies=TRUE)
-install.packages("dplyr",dependencies=TRUE)
-install.packages("magrittr",dependencies=TRUE)
-install.packages("stringr",dependencies=TRUE)
-install.packages("mongolite",dependencies=TRUE)
-install.packages("jsonlite",dependencies=TRUE)
-install.packages("beepr",dependencies=TRUE)
-
 library(reshape2)
 library(plyr)
 library(dplyr)
