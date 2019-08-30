@@ -3,7 +3,7 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
-.Library.site()
+install.packages("reshape2")
 
 library(reshape2)
 library(plyr)
