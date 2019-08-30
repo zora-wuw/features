@@ -3,6 +3,8 @@
 source('f0022-b.r')
 options(stringsAsFactors=FALSE)
 
+.libPaths()
+
 library(reshape2)
 library(plyr)
 library(dplyr)
@@ -10,7 +12,7 @@ library(magrittr)
 library(stringr)
 library(mongolite)
 library(jsonlite)
-library(beepr)
+library(beepr, lib.loc="/tmp/RtmpsnVzSO/downloaded_packages")
 
 ########  PART ONE   ######IMPORT CENSUS-------
 supp_files <- 'support/'
