@@ -21,6 +21,7 @@
 * f0019: Convert XML to CSV
 * f0020: Convert CSV to Excel
 * f0021: Convert JSON to CSV
+* f0022: Census R Script for SA1 & SA2
 
 ## Detailed Description
 ### f0002: Create Index
@@ -356,3 +357,16 @@ Inputs:
 
 Outputs:
 * updated weekly_report.csv
+
+
+### f0022: Census R Script for SA1 & SA2
+
+#### SA1:
+
+* f0022-a.r : main R script
+* f0022-b.r : function R script
+
+#### SA2:
+
+* f0022-a.r : main R script
+* f0022-b.r : function R script
