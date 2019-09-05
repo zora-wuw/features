@@ -47,7 +47,6 @@ flist=read.csv(file_list,comment.char = '#',sep=",",quote= '\'')
 #function "import" imports the CSV files, but it automatically searches for filenames
 #with the letters appended if the import fails, eg searches for G04A if G04 doesn't exist. Will generate warnings.
 t <- import2(subfol,file_list,pre,post)
-beep(5)
 ###########CLEANING THE DATA------
 
 
