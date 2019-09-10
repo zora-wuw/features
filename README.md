@@ -22,6 +22,7 @@
 * f0020: Convert CSV to Excel
 * f0021: Convert JSON to CSV
 * f0022: Census R Script for SA1 & SA2
+* f0023: Geocoding
 
 ## Detailed Description
 ### f0002: Create Index
@@ -372,3 +373,15 @@ Outputs:
 
 * f0022-a.r : main R script
 * f0022-b.r : function R script
+
+### f0023: Geocoding
+
+Inputs:
+* Input-File : csv/excel file
+* Output-File : csv file
+* Threshold : default value is 1000
+* Google-API-Key
+* Address-Column : "address" column number or name in csv file
+
+Outputs:
+* CSV file
