@@ -75,6 +75,8 @@ Inputs:
 * User-Name : MongoDB user name
 * Psword : MongoDB password
 * Output-Folder : ended with "/"
+* Collection-Number : Process on "1" or "all" collections
+* Collection-Name : if "Collection-Number" is "1", then set the coolection name
 
 Outputs:
 * CSV files
