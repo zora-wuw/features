@@ -23,6 +23,7 @@
 * f0021: Convert JSON to CSV
 * f0022: Census R Script for SA1 & SA2
 * f0023: Geocoding
+* f0024: Compare Two Collections on MongoDB
 
 ## Detailed Description
 ### f0002: Create Index
@@ -382,6 +383,22 @@ Inputs:
 * Threshold : default value is 1000
 * Google-API-Key
 * Address-Column : "address" column number or name in csv file
+
+Outputs:
+* CSV file
+
+### f0024: Compare Two Collections on MongoDB
+To get new address list
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* User-Name : MongoDB user name
+* Psword : MongoDB user password
+* Output-File : csv file
+* Collection-Raw-Name : Raw data collection name
+* Collection-Geocode-Name : geocoded address collection name
 
 Outputs:
 * CSV file
