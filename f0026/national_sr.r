@@ -197,7 +197,7 @@ g <- g[,c("sa2_9dig2016","sa2_name16.x","70+","H < 799","migr 2006-15","Need Ass
 
 
 ##### Optional: save a csv to prevent having to run whole code again ####
-write.csv(g,file = paste0(home_folder,output_folder,'SR_sa2.csv',row.names = FALSE))
+write.csv(g,file = paste0(home_folder,output_folder,'SR_sa2.csv'),row.names = FALSE)
 
 # Optional: Load the dataset that has been output from QGIS_types
 g <- read.csv(paste0(home_folder,output_folder,'SR_sa2.csv'),check.names = FALSE)
