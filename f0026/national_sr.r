@@ -191,7 +191,7 @@ g=full_join(g,f[[5]],by=c('sa2_9dig2016' = 'SA2_MAINCODE_2016'))
 g$sa2_name16.x[is.na(g$sa2_name16.x)] <- g$SA2_NAME_2016[is.na(g$sa2_name16.x)]
 
 # keep certain columns
-g <- g[,c("sa2_9dig2016","sa2_name16.x","70+","H < $799","migr 2006-15","Need Assistance",
+g <- g[,c("sa2_9dig2016","sa2_name16.x","70+","H < 799","migr 2006-15","Need Assistance",
           "No Yr 12","No Volunteer","Moved Dif SA2 5 yr","per100_no_emergency_money_synth",
           "employment_rate","trust_1_3_pc_synth","k10_me_2_rate_3_11_7_13"   )]
 
