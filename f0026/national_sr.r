@@ -5,6 +5,7 @@
 # import csv strings as strings
 options(stringsAsFactors = FALSE)
 
+install.packages("ini")
 # libraries
 library(dplyr)
 library(reshape2)
