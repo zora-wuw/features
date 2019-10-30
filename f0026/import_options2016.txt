@@ -1,0 +1,25 @@
+Table Name,Table Number,Regex,Scaling
+#women,G04,'(Age_yr_[0-9]+_[0-9]+_F|^Tot_F$|Age_yr_100_yr_over_F)',ind
+age,G04,'[0-9]_[0-9].*P$',ind
+#income,G17,'^P_[^TP].*Tot$',all#Consider though family income, G28 note this is worse than hhld income
+household_income,G29,'[0-9e]_Tot',hh
+migrated,G10,'^Tot_.*[0-9]$',ind
+assistance,G18,'^P_Tot_.*assistance$',ind
+#car,G30,'MVs$',hh
+high_school,G16,'^P_[^TH].*_Tot$',p15a
+#mortgage,G33,'(^O_MTG_Total|^O_OR_Total|^R_RE_Agt_Total|^R_ST_h_auth_Total)',hh
+#industry,G51,'P_ID_NS_Tot|P_Tot_Tot|(^P_.*Tot$)',p15a
+#occupation,G57,'P_Tot_Occ|P_Tot_Tot|(^P_Tot)',p15a
+#ancestry,G08,'[a-z]_Tot_Resp',ind
+volunteering,G19,'P_Tot_[^T].*r$',ind
+#highered,G50,'P_ToT_[^TI]',ind
+internal_1yr,G41,'([0-9]|_Tot)_P$',ind
+internal_5yr,G42,'([0-9]|_Tot)_P$',ind
+selected_avs,G02,'^Median|Average_house',none
+
+#name,number,regex to keep columns,scaling
+#
+#Note: Pattern    str1|(str2) matches str2 while throwing away things that match str1
+#if aggregate is 1, create a txt file telling it which columns to aggregate.
+#scalings: ind = all persons, hh = households, p15 = over 15, p15a over 15 not at school,
+#none = no scaling. Actually p15 and p15a both use 
