@@ -65,142 +65,144 @@ stdise <- function(x){
   x2 <- (x - mean(x,na.rm = TRUE))/sd(x,na.rm=TRUE)
   return(x2)
 }
+temp_output <- paste0(home_folder,output_folder,'SR_sa2.csv')
+
+if (!exists(temp_output)){
+  ##### add census variables #####
+  opts <- 'import_options'
+  file_agg <- 'aggregate_columns.txt'
+  supp_files <- paste0(home_folder,support_folder)
+
+  yr <- '2016'
+
+  # filenames
+  pre <- '2016Census_'
+  post <- '_AUS_SA2.csv'
+  subfol <- census_data_folder
+
+  # main function to process census data
+  t3 <- primary(db=NULL,pre,post,subfol,supp_files,yr,opts)
+
+  # scale by population if last arg is TRUE, or just remove scaling variable if it is FALSE.
+  t3_scaled <- scale_pop(t3,yr,subfol,pre,post,TRUE)
+  t3        <- scale_pop(t3,yr,subfol,pre,post,FALSE)  
+
+  # load the SA2 codes
+  table = 'G01'
+  ind = read.csv(paste(subfol,'/',pre,table,post,sep=""))
+  SA_codes=ind[,1]
+
+  t3_scaled$sa2_9dig2016 <- SA_codes
+  t3$sa2_9dig2016 <- SA_codes
+
+  t3_scaled <- t3_scaled[,c(ncol(t3_scaled),1:(ncol(t3_scaled)-1))]
+  t3 <- t3[,c(ncol(t3),1:(ncol(t3)-1))]
+
+  # aggregate
+  t3_scaled_agg <- col_agg2(t3_scaled,file_agg,yr,supp_files)
+  t3_agg <- col_agg2(t3,file_agg,yr,supp_files)
+
+  duds <- complete.cases(t3_scaled_agg)
+
+  t3_scaled_agg <- t3_scaled_agg[duds,] #removes rows with an NA
+  t3 <- t3[duds,]
+  t3_scaled <- t3_scaled[duds,]
+  t3_agg <- t3_agg[duds,]
+
+  # keep columns in the columns section of the init file
+  a <- inits$columns$census_keep
+
+  b <- unlist(strsplit(a,','))
+
+  c = match(b,colnames(t3_scaled_agg))
+  if (sum(is.na(c))>0){
+    print(paste('warning: column',b[is.na(c)],'not found'))
+  }
+
+
+  tokeep_census <- t3_scaled_agg[,c(1,c)]
+
+  print('census processing finished')
+  #### add other variables ####
+
+  # add employment
+  # source: NATSEM
+
+  filename <- 'NATSEM_Social_and_Economic_Indicators_Employment_Rate_SA2_2016.geoJSON'
+
+  t3 <- fromJSON(paste0(natsem_json_data_folder,filename))
+  tokeep_employment <- data.frame(as.integer(t3$features$properties$sa2_code16),
+                                  t3$features$properties$sa2_name16,
+                                  t3$features$properties$employment_rate)
+  colnames(tokeep_employment) = c('sa2_code16','sa2_name16','employment_rate')
 
 
 
-##### add census variables #####
-opts <- 'import_options'
-file_agg <- 'aggregate_columns.txt'
-supp_files <- paste0(home_folder,support_folder)
+  filename <- 'NATSEM_Financial_Indicators_Synthetic_Estimates_SA2_2016.geoJSON'
+  t6 <- fromJSON(paste0(natsem_json_data_folder,filename))
+  tokeep_emergency <- data.frame(as.integer(t6$features$properties$sa2_code16),
+                                 t6$features$properties$sa2_name16,
+                                 t6$features$properties$per100_no_emergency_money_synth)
+  colnames(tokeep_emergency) = c('sa2_code16','sa2_name16','per100_no_emergency_money_synth')
 
-yr <- '2016'
 
-# filenames
-pre <- '2016Census_'
-post <- '_AUS_SA2.csv'
-subfol <- census_data_folder
+  filename <- 'NATSEM_Trust_Indicators_Synthetic_Estimates_SA2_2016.geoJSON'
+  t5 <- fromJSON(paste0(natsem_json_data_folder,filename))
+  tokeep_trust <- data.frame(as.integer(t5$features$properties$sa2_code16),
+                             t5$features$properties$sa2_name16,
+                             t5$features$properties$trust_1_3_pc_synth)
+  colnames(tokeep_trust) = c('sa2_code16','sa2_name16','trust_1_3_pc_synth')
 
-# main function to process census data
-t3 <- primary(db=NULL,pre,post,subfol,supp_files,yr,opts)
 
-# scale by population if last arg is TRUE, or just remove scaling variable if it is FALSE.
-t3_scaled <- scale_pop(t3,yr,subfol,pre,post,TRUE)
-t3        <- scale_pop(t3,yr,subfol,pre,post,FALSE)  
 
-# load the SA2 codes
-table = 'G01'
-ind = read.csv(paste(subfol,'/',pre,table,post,sep=""))
-SA_codes=ind[,1]
+  # PHIDU data, uses 2011 sa2s
+  filename <- 'SA2_Psychological_Distress_Modelled_Estimate_2011_2013.geoJSON'
+  t4 <- fromJSON(paste0(phidu_json_data_folder,filename))
+  tokeep_psychdistress <- data.frame(t4$features$properties$area_code,
+                                     t4$features$properties$area_name,
+                                     t4$features$properties$k10_me_2_rate_3_11_7_13)
+  colnames(tokeep_psychdistress) <- c('sa2_code11','sa2_name11','k10_me_2_rate_3_11_7_13')
 
-t3_scaled$sa2_9dig2016 <- SA_codes
-t3$sa2_9dig2016 <- SA_codes
 
-t3_scaled <- t3_scaled[,c(ncol(t3_scaled),1:(ncol(t3_scaled)-1))]
-t3 <- t3[,c(ncol(t3),1:(ncol(t3)-1))]
+  # import sa2s correspondence file
+  sa2_file <- 'correspondence2011to2016_SA2.csv'
 
-# aggregate
-t3_scaled_agg <- col_agg2(t3_scaled,file_agg,yr,supp_files)
-t3_agg <- col_agg2(t3,file_agg,yr,supp_files)
 
-duds <- complete.cases(t3_scaled_agg)
+  corr <- read.csv(paste0(aux_data_folder,sa2_file),sep='\t')
 
-t3_scaled_agg <- t3_scaled_agg[duds,] #removes rows with an NA
-t3 <- t3[duds,]
-t3_scaled <- t3_scaled[duds,]
-t3_agg <- t3_agg[duds,]
+  tokeep_psychdistress_2016 <- left_join(corr,tokeep_psychdistress,by = c('SA2_MAINCODE_2011' = 'sa2_code11'))
+  tokeep_psychdistress_2016 <- tokeep_psychdistress_2016[order(tokeep_psychdistress_2016$RATIO,
+                                                               tokeep_psychdistress_2016$SA2_NAME_2016,
+                                                               decreasing=TRUE),]
+  tokeep_psychdistress_2016_2 <- tokeep_psychdistress_2016[!duplicated(tokeep_psychdistress_2016[,"SA2_MAINCODE_2016"]),]
 
-# keep columns in the columns section of the init file
-a <- inits$columns$census_keep
+  f=list(
+    tokeep_census,tokeep_emergency,tokeep_employment,tokeep_trust,tokeep_psychdistress_2016_2
+  )
 
-b <- unlist(strsplit(a,','))
+  # combine all the things into one thing by joining on sa2 code
+  g=f[[1]]
+  g=full_join(g,f[[2]],by=c('sa2_9dig2016' = 'sa2_code16'))
+  g=full_join(g,f[[3]],by=c('sa2_9dig2016' = 'sa2_code16'))
+  g=full_join(g,f[[4]],by=c('sa2_9dig2016' = 'sa2_code16'))
+  g=full_join(g,f[[5]],by=c('sa2_9dig2016' = 'SA2_MAINCODE_2016'))
 
-c = match(b,colnames(t3_scaled_agg))
-if (sum(is.na(c))>0){
-  print(paste('warning: column',b[is.na(c)],'not found'))
+  # replace nas from one set of sa2s with value from the other set
+  g$sa2_name16.x[is.na(g$sa2_name16.x)] <- g$SA2_NAME_2016[is.na(g$sa2_name16.x)]
+
+  # keep certain columns
+  g <- g[,c("sa2_9dig2016","sa2_name16.x","70+","H < 799","migr 2006-15","Need Assistance",
+            "No Yr 12","No Volunteer","Moved Dif SA2 5 yr","per100_no_emergency_money_synth",
+            "employment_rate","trust_1_3_pc_synth","k10_me_2_rate_3_11_7_13"   )]
+
+
+  ##### Optional: save a csv to prevent having to run whole code again ####
+  write.csv(g,file = temp_output,row.names = FALSE)
+} else {
+  # Optional: Load the dataset that has been output from QGIS_types
+  g <- read.csv(paste0(home_folder,output_folder,'SR_sa2.csv'),check.names = FALSE)
 }
 
-
-tokeep_census <- t3_scaled_agg[,c(1,c)]
-
-print('census processing finished')
-#### add other variables ####
-
-# add employment
-# source: NATSEM
-
-filename <- 'NATSEM_Social_and_Economic_Indicators_Employment_Rate_SA2_2016.geoJSON'
-
-t3 <- fromJSON(paste0(natsem_json_data_folder,filename))
-tokeep_employment <- data.frame(as.integer(t3$features$properties$sa2_code16),
-                                t3$features$properties$sa2_name16,
-                                t3$features$properties$employment_rate)
-colnames(tokeep_employment) = c('sa2_code16','sa2_name16','employment_rate')
-
-
-
-filename <- 'NATSEM_Financial_Indicators_Synthetic_Estimates_SA2_2016.geoJSON'
-t6 <- fromJSON(paste0(natsem_json_data_folder,filename))
-tokeep_emergency <- data.frame(as.integer(t6$features$properties$sa2_code16),
-                               t6$features$properties$sa2_name16,
-                               t6$features$properties$per100_no_emergency_money_synth)
-colnames(tokeep_emergency) = c('sa2_code16','sa2_name16','per100_no_emergency_money_synth')
-
-
-filename <- 'NATSEM_Trust_Indicators_Synthetic_Estimates_SA2_2016.geoJSON'
-t5 <- fromJSON(paste0(natsem_json_data_folder,filename))
-tokeep_trust <- data.frame(as.integer(t5$features$properties$sa2_code16),
-                           t5$features$properties$sa2_name16,
-                           t5$features$properties$trust_1_3_pc_synth)
-colnames(tokeep_trust) = c('sa2_code16','sa2_name16','trust_1_3_pc_synth')
-
-
-
-# PHIDU data, uses 2011 sa2s
-filename <- 'SA2_Psychological_Distress_Modelled_Estimate_2011_2013.geoJSON'
-t4 <- fromJSON(paste0(phidu_json_data_folder,filename))
-tokeep_psychdistress <- data.frame(t4$features$properties$area_code,
-                                   t4$features$properties$area_name,
-                                   t4$features$properties$k10_me_2_rate_3_11_7_13)
-colnames(tokeep_psychdistress) <- c('sa2_code11','sa2_name11','k10_me_2_rate_3_11_7_13')
-
-
-# import sa2s correspondence file
-sa2_file <- 'correspondence2011to2016_SA2.csv'
-
-
-corr <- read.csv(paste0(aux_data_folder,sa2_file),sep='\t')
-
-tokeep_psychdistress_2016 <- left_join(corr,tokeep_psychdistress,by = c('SA2_MAINCODE_2011' = 'sa2_code11'))
-tokeep_psychdistress_2016 <- tokeep_psychdistress_2016[order(tokeep_psychdistress_2016$RATIO,
-                                                             tokeep_psychdistress_2016$SA2_NAME_2016,
-                                                             decreasing=TRUE),]
-tokeep_psychdistress_2016_2 <- tokeep_psychdistress_2016[!duplicated(tokeep_psychdistress_2016[,"SA2_MAINCODE_2016"]),]
-
-f=list(
-  tokeep_census,tokeep_emergency,tokeep_employment,tokeep_trust,tokeep_psychdistress_2016_2
-)
-
-# combine all the things into one thing by joining on sa2 code
-g=f[[1]]
-g=full_join(g,f[[2]],by=c('sa2_9dig2016' = 'sa2_code16'))
-g=full_join(g,f[[3]],by=c('sa2_9dig2016' = 'sa2_code16'))
-g=full_join(g,f[[4]],by=c('sa2_9dig2016' = 'sa2_code16'))
-g=full_join(g,f[[5]],by=c('sa2_9dig2016' = 'SA2_MAINCODE_2016'))
-
-# replace nas from one set of sa2s with value from the other set
-g$sa2_name16.x[is.na(g$sa2_name16.x)] <- g$SA2_NAME_2016[is.na(g$sa2_name16.x)]
-
-# keep certain columns
-g <- g[,c("sa2_9dig2016","sa2_name16.x","70+","H < 799","migr 2006-15","Need Assistance",
-          "No Yr 12","No Volunteer","Moved Dif SA2 5 yr","per100_no_emergency_money_synth",
-          "employment_rate","trust_1_3_pc_synth","k10_me_2_rate_3_11_7_13"   )]
-
-
-##### Optional: save a csv to prevent having to run whole code again ####
-write.csv(g,file = paste0(home_folder,output_folder,'SR_sa2.csv'),row.names = FALSE)
-
-# Optional: Load the dataset that has been output from QGIS_types
-g <- read.csv(paste0(home_folder,output_folder,'SR_sa2.csv'),check.names = FALSE)
 
 
 
