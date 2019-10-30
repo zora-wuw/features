@@ -14,8 +14,8 @@ library(jsonlite)
 library(ini)
 
 # relative folder paths
-# support_folder <- 'support/'  # where the supporting .txt files go. Must exist inside the home_folder 
-support_folder <- './'
+support_folder <- NULL  # where the supporting .txt files go. Must exist inside the home_folder 
+# support_folder <- './'
 output_folder <- 'images/'  # must be called images and the images folder must exist inside home folder
 
 # import .ini file with absolute paths in it
