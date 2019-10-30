@@ -19,7 +19,8 @@ output_folder <- 'images/'  # must be called images and the images folder must e
 
 # import .ini file with absolute paths in it
 inits <- read.ini(paste0(support_folder,'paths.ini'))
-json_data_folder  <- inits$file_paths$json_data_folder  # contains json and geojson files for non-census data
+natsem_json_data_folder  <- inits$file_paths$netsem_json_data_folder  # contains json and geojson files for non-census data
+phidu_json_data_folder  <- inits$file_paths$phidu_json_data_folder # contains json and geojson files for non-census data
 aux_data_folder  <-  inits$file_paths$aux_data_folder # contains 2011 to 2016 correspondence file and abs geography file
 census_data_folder <- inits$file_paths$census_data_folder  # unzipped GCP folder
 script_folder <- inits$file_paths$script_folder # location of census_functions.R
