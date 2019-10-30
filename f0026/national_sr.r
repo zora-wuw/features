@@ -1,6 +1,6 @@
 # only for lewis' computer, testing etc
-home_folder <- 'C:/Users/lgurrstephen/Desktop/Glen Eira/national_SR/'  # where the outputs will go
-setwd(home_folder)
+# home_folder <- 'C:/Users/lgurrstephen/Desktop/Glen Eira/national_SR/'  # where the outputs will go
+# setwd(home_folder)
 
 # import csv strings as strings
 options(stringsAsFactors = FALSE)
