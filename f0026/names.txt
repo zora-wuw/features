@@ -224,7 +224,7 @@ Tot_F,W Total
 sa2_9dig2016,SA2_9DIG2016
 sa2_name16.x,SA2_NAME2016
 70+,Age_70+
-H < $799,Household_Income<$700/wk
+H < 799,Household_Income<$700/wk
 migr 2006-15,Recent_Migrants
 Need Assistance,Need_Assistance
 No Yr 12,Did_Not_Graduate_Year_12
