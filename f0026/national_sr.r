@@ -130,7 +130,7 @@ tokeep_census <- t3_scaled_agg[,c(1,c)]
 
 filename <- 'NATSEM - Social and Economic Indicators - Employment Rate SA2 2016.geoJSON'
 
-t3 <- fromJSON(paste0(json_data_folder,filename))
+t3 <- fromJSON(paste0(natsem_json_data_folder,filename))
 tokeep_employment <- data.frame(as.integer(t3$features$properties$sa2_code16),
                                 t3$features$properties$sa2_name16,
                                 t3$features$properties$employment_rate)
@@ -139,7 +139,7 @@ colnames(tokeep_employment) = c('sa2_code16','sa2_name16','employment_rate')
 
 
 filename <- 'NATSEM - Financial Indicators - Synthetic Estimates SA2 2016.geoJSON'
-t6 <- fromJSON(paste0(json_data_folder,filename))
+t6 <- fromJSON(paste0(natsem_json_data_folder,filename))
 tokeep_emergency <- data.frame(as.integer(t6$features$properties$sa2_code16),
                                t6$features$properties$sa2_name16,
                                t6$features$properties$per100_no_emergency_money_synth)
@@ -147,7 +147,7 @@ colnames(tokeep_emergency) = c('sa2_code16','sa2_name16','per100_no_emergency_mo
 
 
 filename <- 'NATSEM - Trust Indicators - Synthetic Estimates SA2 2016.geoJSON'
-t5 <- fromJSON(paste0(json_data_folder,filename))
+t5 <- fromJSON(paste0(natsem_json_data_folder,filename))
 tokeep_trust <- data.frame(as.integer(t5$features$properties$sa2_code16),
                            t5$features$properties$sa2_name16,
                            t5$features$properties$trust_1_3_pc_synth)
@@ -157,7 +157,7 @@ colnames(tokeep_trust) = c('sa2_code16','sa2_name16','trust_1_3_pc_synth')
 
 # PHIDU data, uses 2011 sa2s
 filename <- 'SA2 Psychological Distress - Modelled Estimate 2011-2013.geoJSON'
-t4 <- fromJSON(paste0(json_data_folder,filename))
+t4 <- fromJSON(paste0(phidu_json_data_folder,filename))
 tokeep_psychdistress <- data.frame(t4$features$properties$area_code,
                                    t4$features$properties$area_name,
                                    t4$features$properties$k10_me_2_rate_3_11_7_13)
