@@ -67,7 +67,7 @@ stdise <- function(x){
 }
 temp_output <- paste0(home_folder,output_folder,'SR_sa2.csv')
 
-if (!exists(temp_output)){
+if (!file.exists(temp_output)){
   ##### add census variables #####
   opts <- 'import_options'
   file_agg <- 'aggregate_columns.txt'
