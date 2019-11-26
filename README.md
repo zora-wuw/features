@@ -25,6 +25,8 @@
 * f0023: Geocoding
 * f0024: Compare Two Collections on MongoDB
 * f0025: Update Records on MongoDB
+* f0026: R Script For National Social Resilience (Used in P0015)
+* f0027: QGIS
 
 ## Detailed Description
 ### f0002: Create Index
@@ -414,3 +416,12 @@ Inputs:
 * Psword : MongoDB user password
 * Collection-Raw-Name : Raw data collection name
 * Collection-Geocode-Name : geocoded address collection name
+
+### f0027: QGIS
+
+f0027.sh: activate the anaconda environment first, then process f0027.py
+
+Inputs:
+* Atlas-Dataset: exact file path of atlas dataset
+* Shapefile: exact file path of shape file
+* Output-File
