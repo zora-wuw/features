@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 from qgis.core import *
 from PyQt5.QtCore import *
 
