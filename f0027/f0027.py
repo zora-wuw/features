@@ -50,7 +50,7 @@ if shape_file_year == "2016":
     'OVERLAY' : overlay_er,\
     'OVERLAY_FIELDS' : ['SA2_MAIN16','SA2_5DIG16','SA2_NAME16'],\
     'INPUT' : layer_csv}
-else if shape_file_year == "2011":
+elif shape_file_year == "2011":
     params = {
     'INPUT_FIELDS' : [],\
     'OUTPUT' : output_file,\
