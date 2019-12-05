@@ -30,6 +30,7 @@ config.read('config.ini')
 atlas_dataset = config['DEFAULT']['Atlas-Dataset'] # exact file path
 shapefile = config['DEFAULT']['Shapefile'] # exact file path of shape file
 output_file = config['DEFAULT']['Output-File']
+shape_file_year = config['DEFAULT']['Shape-File-Year']
 
 # This is the actual QGIS part of the script and it works as a python script in the QGIS GUI
 uri = 'file://{}?d?delimiter=,type=csv&detectTypes=yes&xField=longtitude&yField=latitude&crs=EPSG:4326&spatialIndex=no&subsetIndex=no&watchFile=no'.format(atlas_dataset)
@@ -42,12 +43,22 @@ overlay_er = QgsVectorLayer(uri2,'somename2','ogr')
 if not overlay_er.isValid():
     print('sa2 shapefile layer failed to load')
 
-params = {
-'INPUT_FIELDS' : [],\
-'OUTPUT' : output_file,\
-'OVERLAY' : overlay_er,\
-'OVERLAY_FIELDS' : ['SA2_MAIN16','SA2_5DIG16','SA2_NAME16'],\
-'INPUT' : layer_csv}
+if shape_file_year == "2016":
+    params = {
+    'INPUT_FIELDS' : [],\
+    'OUTPUT' : output_file,\
+    'OVERLAY' : overlay_er,\
+    'OVERLAY_FIELDS' : ['SA2_MAIN16','SA2_5DIG16','SA2_NAME16'],\
+    'INPUT' : layer_csv}
+else if shape_file_year == "2011":
+    params = {
+    'INPUT_FIELDS' : [],\
+    'OUTPUT' : output_file,\
+    'OVERLAY' : overlay_er,\
+    'OVERLAY_FIELDS' : ['SA2_MAIN11','SA2_5DIG11','SA2_NAME11'],\
+    'INPUT' : layer_csv}
+else:
+    print("shape file year is wrong")
 
 processing.run("native:intersection",params)
 
