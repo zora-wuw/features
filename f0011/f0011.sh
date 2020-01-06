@@ -18,7 +18,7 @@ currentyear=$(date +'%Y')
 echo "current year: "$currentyear
 
 # get current week
-currentweek=$(((((($currenttimestamp-1546214400000))/604800000))+1))
+currentweek=$(((((($currenttimestamp-1577624400000))/604800000))+1))
 echo "current week: " $currentweek
 
 array=()
