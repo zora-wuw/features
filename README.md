@@ -166,8 +166,7 @@ Outputs:
 
 ### f0012: Count the number of hashtag daily
 
-#### f0012-a: Without Geoname & f0012-b: With Geoname
-f0012-b is multiprocessing program
+#### f0012-a: Without Geoname
 
 Inputs:
 * IP : MongoDB server IP
@@ -175,6 +174,20 @@ Inputs:
 * DB-Name : database name
 * Contain-String : filter the collection by the contained string in the name
 * Output-Path : write output files into this path
+
+Outputs:
+* CSV files
+
+### f0012-b: With Geoname
+Multiprocessing program
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* Contain-String : filter the collection by the contained string in the name
+* Output-Path : write output files into this path
+* CPU-Number
 
 Outputs:
 * CSV files
@@ -234,6 +247,7 @@ Inputs:
 * AU-Cities-File : au-cities.csv in supporting-files
 * AU-States-File : au-states.csv in supporting-files
 * AU-Countries-File : au-country.csv in supporting-files
+* CPU-Number
 
 Outputs:
 * CSV files
