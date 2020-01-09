@@ -167,6 +167,7 @@ Outputs:
 ### f0012: Count the number of hashtag daily
 
 #### f0012-a: Without Geoname & f0012-b: With Geoname
+f0012-b is multiprocessing program
 
 Inputs:
 * IP : MongoDB server IP
@@ -216,6 +217,7 @@ Outputs:
 ### f0015: Geoname
 
 #### f0015-a: Get geoname information based on user location
+multiprocessing program
 
 Inputs:
 * Flag : 
