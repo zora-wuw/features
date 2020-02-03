@@ -17,8 +17,19 @@ currenttimestamp=$(date +%s000)
 currentyear=$(date +'%Y')
 echo "current year: "$currentyear
 
+# set reference timestamp for each year
+declare -a year_timestamp
+year_timestamp=( [2020]=1577624400000 [2021]=1609678800000 [2022]=1641128400000 [2023]=1672578000000 [2024]=1704027600000 [2025]=1735477200000 )
+
+# get reference timestamp
+ref_timestamp=${year_timestamp[$currentyear]}
+
+if [[ $currenttimestamp -lt $ref_timestamp ]]; then
+  ref_timestamp=${year_timestamp[$currentyear-1]}
+fi
+
 # get current week
-currentweek=$(((((($currenttimestamp-1577624400000))/604800000))+1))
+currentweek=$(((((($currenttimestamp-$ref_timestamp))/604800000))+1))
 echo "current week: " $currentweek
 
 array=()
