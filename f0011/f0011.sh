@@ -26,6 +26,11 @@ ref_timestamp=${year_timestamp[$currentyear]}
 
 if [[ $currenttimestamp -lt $ref_timestamp ]]; then
   ref_timestamp=${year_timestamp[$currentyear-1]}
+else
+  if [[ $currenttimestamp -ge ${year_timestamp[$currentyear+1]} ]]; then
+    ref_timestamp=${year_timestamp[$((currentyear+1))]}
+    currentyear=$((currentyear+1))
+  fi
 fi
 
 # get current week
