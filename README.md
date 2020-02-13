@@ -27,6 +27,7 @@
 * f0025: Update Records on MongoDB
 * f0026: R Script For National Social Resilience (Used in P0015)
 * f0027: QGIS
+* f0028: Search Query In Twitter Collection
 
 ## Detailed Description
 ### f0002: Create Index
@@ -442,3 +443,18 @@ Inputs:
 * Shapefile: exact file path of shape file
 * Output-File
 * Shape-File-Year : "2016" or "2011"
+
+### f0028: Search Query In Twitter Collection
+
+Inputs:
+* IP : MongoDB server IP
+* MongoDB-Port
+* DB-Name : database name
+* User-Name : MongoDB user name
+* Psword : MongoDB user password
+* Debug : if equal any string, then create log file, otherwise, keep it empty
+* Query-Input : CSV file with one column (no header)
+
+Outputs:
+* csv_result/{collection}/{query}/{tweet_id}.json
+* json_result/{collection}_{query}.csv
