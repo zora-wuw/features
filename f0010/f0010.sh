@@ -18,6 +18,7 @@
 
 # Jenkins Configuraitons Directory
 cd $JENKINS_HOME
+echo $JENKINS_HOME
 
 # Add general configurations, job configurations, and user content
 git add -- *.xml jobs/*/*.xml userContent/*
