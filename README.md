@@ -497,7 +497,7 @@ Inputs:
 	* This file contains old column name and new column name that all the old column name need to be changed to the new column name.
 
 Outputs:
-* CSV files: CSV files containing scaled 2016 Census data 
+* CSV file: CSV file containing scaled 2016 Census data 
 
 ### f0031: Read a generated Census CSV file (by f0030) and clustering the data by using PCA and Kmeans.
 
@@ -514,5 +514,5 @@ Inputs:
 	* Kmeans_Random_State: Determines random number generation for centroid initialization. Use an int to make the randomness deterministic
 		
 Outputs:
-* CSV files: CSV files containing clustered 2016 Census data 
+* CSV file: CSV file containing clustered 2016 Census data 
 	
