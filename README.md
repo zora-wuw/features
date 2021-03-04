@@ -466,17 +466,17 @@ Outputs:
 ### f0029: Download Census collections from MongoDB and convert them to CSV files
 
 Inputs:
-	* Config file:
-		* IP : MongoDB host server IP
-		* MongoDB-Port : MongoDF port
-		* DB-Name : Database name
-		* User-Name : MongoDB user name
-		* Psword : MongoDB user password
-		* Collection-Name : Collection name
-		* Import-Option-File: Text file including import options
-		* Output-Population-File: Name of output file
-	* import_options2016.txt
-		- This file contains information about required collections and columns name.
+* Config file:
+	* IP : MongoDB host server IP
+	* MongoDB-Port : MongoDF port
+	* DB-Name : Database name
+	* User-Name : MongoDB user name
+	* Psword : MongoDB user password
+	* Collection-Name : Collection name
+	* Import-Option-File: Text file including import options
+	* Output-Population-File: Name of output file
+* import_options2016.txt
+	- This file contains information about required collections and columns name.
 
 Outputs:
 	* CSV files: CSV files containing downloaded collections with selected columns. 
@@ -484,17 +484,17 @@ Outputs:
 ### f0030: Read generated Census CSV files (by f0029) and scaling values with relevant population
 
 Inputs:
-	* Config file:
-		* Input-Files-Directory: f0029 directory where stores all generated census CSV data
-		* Import-Option-File: Text file including import options
-		* Extracted-Census: list of the generated Census files by f0029 
-		* Population-data: name of generated population file by f0029 
-		* Name: Text file including column names to be changed
-		* Output-File: Name of output file
-	* import_options2016.txt
-		* This file contains information about which population has to be used for scaling
-	* names.txt
-		* This file contains old column name and new column name that all the old column name need to be changed to the new column name.
+* Config file:
+	* Input-Files-Directory: f0029 directory where stores all generated census CSV data
+	* Import-Option-File: Text file including import options
+	* Extracted-Census: list of the generated Census files by f0029 
+	* Population-data: name of generated population file by f0029 
+	* Name: Text file including column names to be changed
+	* Output-File: Name of output file
+* import_options2016.txt
+	* This file contains information about which population has to be used for scaling
+* names.txt
+	* This file contains old column name and new column name that all the old column name need to be changed to the new column name.
 
 Outputs:
 	* CSV files: CSV files containing scaled 2016 Census data 
@@ -502,16 +502,16 @@ Outputs:
 ### f0031: Read a generated Census CSV file (by f0030) and clustering the data by using PCA and Kmeans.
 
 Inputs:
-	* Config file:
-		* Input-Files-Directory: f0030 directory where stores generated census data
-		* Input_Data: name of generated census data
-		* Output-File: Name of output file
-		* PCA_Component_No: Number of Component for PCA
-		* Kmeans_Init_Status: Method for initialization:
-		* Kmean_Cluster_No: The number of clusters to form as well as the number of centroids to generate.
-		* Kmeans_Init_No: Number of time the k-means algorithm will be run with different centroid seeds.
-		* Kmeans_Max_iter: Maximum number of iterations of the k-means algorithm for a single run.
-		* Kmeans_Random_State: Determines random number generation for centroid initialization. Use an int to make the randomness deterministic
+* Config file:
+	* Input-Files-Directory: f0030 directory where stores generated census data
+	* Input_Data: name of generated census data
+	* Output-File: Name of output file
+	* PCA_Component_No: Number of Component for PCA
+	* Kmeans_Init_Status: Method for initialization:
+	* Kmean_Cluster_No: The number of clusters to form as well as the number of centroids to generate.
+	* Kmeans_Init_No: Number of time the k-means algorithm will be run with different centroid seeds.
+	* Kmeans_Max_iter: Maximum number of iterations of the k-means algorithm for a single run.
+	* Kmeans_Random_State: Determines random number generation for centroid initialization. Use an int to make the randomness deterministic
 		
 Outputs:
 	* CSV files: CSV files containing clustered 2016 Census data 
