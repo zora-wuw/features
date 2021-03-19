@@ -29,8 +29,8 @@
 * f0027: QGIS
 * f0028: Search Query In Twitter Collection
 * f0029: Download Collections from MongoDB and Convert Them to CSV Files
-* f0039: Read Census CSV Files (output of f0029) and Scaling Values with Relevant Population
-* f0040: Read a Census CSV File (output of f0030) and Clustering Data by Using PCA and Kmeans.
+* f0030: Read Census CSV Files (output of f0029) and Scaling Values with Relevant Population
+* f0031: Read a Census CSV File (output of f0030) and Clustering Data by Using PCA and Kmeans.
 
 ## Detailed Description
 ### f0002: Create Index
