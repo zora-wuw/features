@@ -1,0 +1,237 @@
+oldname,newname
+SA1_7DIGITCODE_2016,code
+Num_MVs_per_dweling_0_MVs,no car
+Num_MVs_per_dweling_1_MVs,1 car
+Num_MVs_per_dweling_2_MVs,2 car
+Num_MVs_per_dweling_3_MVs,3 car
+Num_MVs_per_dweling_4mo_MVs,4+car
+P_Neg_Nil_income_Tot,No income
+P_Y12e_Tot,Yr 12
+P_Y11e_Tot,Yr 11
+P_Y10e_Tot,Yr 10
+P_Y9e_Tot,Yr 9
+P_Y8b_Tot,Yr 8 or below
+P_DNGTS_Tot,Did not go to school
+Tot_1946_1955,migr 1946-55
+Tot_1956_1965,migr 1956-65
+Tot_1966_1975,migr 1966-75
+Tot_1976_1985,migr 1976-85
+Tot_1986_1995,migr 1986-95
+Tot_1996_2005,migr 1996-2005
+Tot_2006_2010,migr 2006-10
+Tot_2011,migr 2011
+Tot_2012,migr 2012
+Tot_2013,migr 2013
+Tot_2014,migr 2014
+Tot_2015,migr 2015
+Tot_2016,migr 2016
+P_1_149_Tot,P_1-149
+P_150_299_Tot,P_150-299
+P_300_399_Tot,P_300-399
+P_400_499_Tot,P_400-499
+P_500_649_Tot,P_500-649
+P_650_799_Tot,P_650-799
+P_800_999_Tot,P_800-999
+P_1000_1249_Tot,P_1000-1249
+P_1250_1499_Tot,P_1250-1499
+P_1500_1749_Tot,P_1500-1749
+P_1750_1999_Tot,P_1750-1999
+P_2000_2999_Tot,P_2000-2999
+P_3000_more_Tot,P_3000+
+O_OR_Total,Own
+O_MTG_Total,Mortgage
+R_RE_Agt_Total,Rent
+R_ST_h_auth_Total,Govt housing
+P_Tot_Need_for_assistance,Need Assistance
+P_Tot_No_need_for_assistance,Don't Need assistance
+P_Ag_For_Fshg_Tot,Ind: Agri/For/Fish
+P_Mining_Tot,Ind: Mining
+P_Manufact_Tot,Ind: Manufacturing
+P_El_Gas_Wt_Waste_Tot,Ind: Utilities
+P_Constru_Tot,Ind: Construction
+P_WhlesaleTde_Tot,Ind: Wholesale
+P_RetTde_Tot,Ind: Retail
+P_Accom_food_Tot,Ind: Accom/Food
+P_Trans_post_wrehsg_Tot,Ind: Logistics
+P_Info_media_teleco_Tot,Ind: Comms
+P_Fin_Insur_Tot,Ind: Finance
+P_RtnHir_REst_Tot,Ind: Real Estate
+P_Pro_scien_tec_Tot,Ind: Science
+P_Admin_supp_Tot,Ind: Admin
+P_Public_admin_sfty_Tot,Ind: Public Admin
+P_Educ_trng_Tot,Ind: Education
+P_HlthCare_SocAs_Tot,Ind: Health
+P_Art_recn_Tot,Ind: Arts/Rec
+P_Oth_scs_Tot,Ind: Other Services
+P_Tot_Managers,Occ: Manager
+P_Tot_Professionals,Occ: Professional
+P_Tot_TechnicTrades_W,Occ: Trade
+P_Tot_CommunPersnlSvc_W,Occ: Community Service
+P_Tot_ClericalAdminis_W,Occ: Clerical
+P_Tot_Sales_W,Occ: Sales
+P_Tot_Mach_oper_drivers,Occ: Machinery
+P_Tot_Labourers,Occ: Labourer
+Negative_Nil_income_Tot,HI_No income
+HI_1_149_Tot,HI_1-149
+HI_150_299_Tot,HI_150-299
+HI_300_399_Tot,HI_300-399
+HI_400_499_Tot,HI_400-499
+HI_500_649_Tot,HI_500-649
+HI_650_799_Tot,HI_650-799
+HI_800_999_Tot,HI_800-999
+HI_1000_1249_Tot,HI_1000-1249
+HI_1250_1499_Tot,HI_1250-1499
+HI_1500_1749_Tot,HI_1500-1749
+HI_1750_1999_Tot,HI_1750-1999
+HI_2000_2499_Tot,HI_2000-2499
+HI_2500_2999_Tot,HI_2500-2999
+HI_3000_3499_Tot,HI_3000-3499
+HI_3500_3999_Tot,HI_3500-3999
+HI_4000_more_Tot,HI_4000+
+Age_yr_0_4_P,0-4
+Age_yr_5_9_P,5-9
+Age_yr_10_14_P,10-14
+Age_yr_15_19_P,15-19
+Age_yr_20_24_P,20-24
+Age_yr_25_29_P,25-29
+Age_yr_30_34_P,30-34
+Age_yr_35_39_P,35-39
+Age_yr_40_44_P,40-44
+Age_yr_45_49_P,45-49
+Age_yr_50_54_P,50-54
+Age_yr_55_59_P,55-59
+Age_yr_60_64_P,60-64
+Age_yr_65_69_P,65-69
+Age_yr_70_74_P,70-74
+Age_yr_75_79_P,75-79
+Age_yr_80_84_P,80-84
+Age_yr_85_89_P,85-89
+Age_yr_90_94_P,90-94
+Age_yr_95_99_P,95-99
+Tot_Before_1946,pre 1946
+migr.1949.55,1949-55
+migr.1956.56,1956-56
+migr.1966.75,1966-75
+migr.1976.85,1976-85
+migr.1986.95,1986-95
+migr.1996.2005,1996-2005
+migr.2006.15,2006-15
+Need.Assistance,Need Assistance
+Don.t.Need.assistance,Don't Need Assistance
+no.car,No Car
+X1.car,One Car
+X2.car,Two Cars
+X3.car,Three Cars
+X4.car,Four+ Cars
+HI_No.income,H No Income
+HI_1.149,H$1-$149
+HI_150.299,H$150-$299
+HI_300.399,H$300-$399
+HI_400.499,H$400-$499
+HI_500.649,H$500-$649
+HI_650.799,H$650-$799
+HI_800.999,H$800-$999
+HI_1000.1249,H$1000-$1249
+HI_1250.1499,H$1250-$1499
+HI_1500.1749,H$1500-$1749
+HI_1750.1999,H$1750-$1999
+HI_2000.2499,H$2000-$2499
+HI_2500.2999,H$2500-$2999
+HI_3000.3499,H$3000-$3499
+HI_3500.3999,H$3500-$3999
+HI_4000.,H$4000+
+Govt.housing,Govt Housing
+Median_age_persons,Median Age
+Median_mortgage_repay_monthly,Median Monthly Mortgage
+Median_tot_prsnl_inc_weekly,Median Ind Income
+Median_rent_weekly,Median Weekly Rent
+Median_tot_fam_inc_weekly,Median Fam Income
+Median_tot_hhd_inc_weekly,Median Hhd Income
+Average_household_size,Av Household Size
+Aust_Tot_Resp,Australian
+Aust_Abor_Tot_Resp,Australian Aboriginal
+Chinese_Tot_Resp,Chinese
+Croatian_Tot_Resp,Croatian
+Dutch_Tot_Resp,Dutch
+English_Tot_Resp,English
+Filipino_Tot_Resp,Filipino
+French_Tot_Resp,French
+German_Tot_Resp,German
+Greek_Tot_Resp,Greek
+Hungarian_Tot_Resp,Hungarian
+Indian_Tot_Resp,Indian
+Irish_Tot_Resp,Irish
+Italian_Tot_Resp,Italian
+Korean_Tot_Resp,Korean
+Lebanese_Tot_Resp,Lebanese
+Macedonian_Tot_Resp,Macedonian
+Maltese_Tot_Resp,Maltese
+Maori_Tot_Resp,Maori
+NZ_Tot_Resp,NZ
+Polish_Tot_Resp,Polish
+Russian_Tot_Resp,Russian
+Scottish_Tot_Resp,Scottish
+Serbian_Tot_Resp,Serbian
+Sth_African_Tot_Resp,Sth African
+Spanish_Tot_Resp,Spanish
+Sri_Lankan_Tot_Resp,Sri Lankan
+Turkish_Tot_Resp,Turkish
+Vietnamese_Tot_Resp,Vietnamese
+Welsh_Tot_Resp,Welsh
+Other_Tot_Resp,Other
+Cats.person,Cats/Person
+Dogs.person,Dogs/Person
+Caddy.person,Caddies/Person
+P_Tot_Volunteer,Volunteer
+P_Tot_N_a_volunteer,No Volunteer
+P_Tot_Voluntary_work_ns,Afraid to say if volunteer
+P_ToT_PD,Postgrad
+P_ToT_GD_GC,Grad dip/cert
+P_ToT_BD,Bachelor
+P_ToT_AdD_D,Diploma
+P_ToT_Cert,Certificate
+Sme_Usl_ad_1_yr_ago_as_2016_P,Same Address 1 yr
+Dif_Usl_ad_1_yr_ago_Sme_SA2_P,Moved Same SA2 1 yr
+Dif_Us_ad_1_ago_Dif_SA2_Tot_P,Moved Dif SA2 1 yr
+Difnt_Usl_add_1_yr_ago_Tot_P,Moved 1 yr total
+Sme_Usl_ad_5_yr_ago_as_2016_P,Same Address 5 yr
+Dif_Usl_ad_5_yr_ago_Sme_SA2_P,Moved Same SA2 5 yr
+Dif_Us_ad_5_ago_Dif_SA2_Tot_P,Moved Dif SA2 5 yr
+Difnt_Usl_add_5_yr_ago_Tot_P,Moved 5 yr total
+Age_yr_0_4_F,W0_4
+Age_yr_5_9_F,W5_9
+Age_yr_10_14_F,W10_14
+Age_yr_15_19_F,W15_19
+Age_yr_20_24_F,W20_24
+Age_yr_25_29_F,W25_29
+Age_yr_30_34_F,W30_34
+Age_yr_35_39_F,W35_39
+Age_yr_40_44_F,W40_44
+Age_yr_45_49_F,W45_49
+Age_yr_50_54_F,W50_54
+Age_yr_55_59_F,W55_59
+Age_yr_60_64_F,W60_64
+Age_yr_65_69_F,W65_69
+Age_yr_70_74_F,W70_74
+Age_yr_75_79_F,W75_79
+Age_yr_80_84_F,W80_84
+Age_yr_85_89_F,W85_89
+Age_yr_90_94_F,W90_94
+Age_yr_95_99_F,W95_99
+Age_yr_100_yr_over_F,W100+
+Tot_F,W Total
+OPDs_Flt_apart_Tot_Psns,Flat or Apartment
+OPDs_SD_r_t_h_th_Tot_Psns,Semi-detached
+OPDs_Separate_house_Persons,House
+OPDs_Other_dwelling_Tot_Psns,Other Dwelling Type
+P_PGrad_Deg_Total,Postgrad
+P_GradDip_and_GradCert_Total,Grad dip/cert
+P_BachDeg_Total,Bachelor
+P_AdvDip_and_Dip_Total,Dip
+P_Cert_Lev_Tot_Total,Cert
+P_Tot_Unemp_Tot,Unemployed
+IA_Total,Internet
+I_NA_Total,No Internet
+T_SEO_T,English Only
+T_SOLSE_VWW_T,English Well
+T_SOLSE_NWNAA_T,English Not Well
