@@ -1,0 +1,11 @@
+aggregated_column,columns_to_aggregate
+"Edu: Yr 9 - 11","Edu: Yr 11,Edu: Yr 10,Edu: Yr 9"
+"Mig: migr 2006-16","Mig: migr 2006-10,Mig: migr 2011,Mig: migr 2012,Mig: migr 2013,Mig: migr 2014,Mig: migr 2015,Mig: migr 2016"
+"Mig: pre 1966","Mig: pre 1946,Mig: migr 1946-55,Mig: migr 1956-65"
+"Ancestry: Anglo-Australian","Ancestry: Australian,Ancestry: NZ,Ancestry: English,Ancestry: Irish,Ancestry: Welsh,Ancestry: Scottish,Ancestry: Sth African"
+"Ancestry: Western European","Ancestry: French,Ancestry: German,Ancestry: Dutch,Ancestry: Spanish"
+"Ancestry: Eastern European","Ancestry: Serbian,Ancestry: Polish,Ancestry: Russian,Ancestry: Greek,Ancestry: Italian,Ancestry: Hungarian,Ancestry: Croatian,Ancestry: Macedonian,Ancestry: Maltese"
+"Ancestry: Middle East","Ancestry: Turkish,Ancestry: Lebanese"
+"Ancestry: East Asia","Ancestry: Vietnamese,Ancestry: Chinese,Ancestry: Filipino,Ancestry: Korean"
+"Ancestry: South Asia","Ancestry: Sri Lankan,Ancestry: Indian"
+"Ancestry: Indigenous","Ancestry: Australian Aboriginal,Ancestry: Maori"
