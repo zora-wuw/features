@@ -1,0 +1,15 @@
+#This file has information about how columns need to be aggregated. This column aggregation should be applied after clustering process completed as this is only for exploring clustering results
+aggregated_column,columns_to_aggregate
+"Age: 5-19","Age: 5-9,Age: 10-14,Age: 15-19"
+"Age: 25-34","Age: 25-29,Age: 30-34"
+"Age: 40-54","Age: 40-44,Age: 45-49,Age: 50-54"
+"Age: 55-69","Age: 55-59,Age: 60-64,Age: 65-69"
+"Age: 70+","Age: 70-74,Age: 75-79,Age: 80-84,Age: 85-89,Age: 90-94,Age: 95-99"
+"Income: H < $799","Income: HI_No income,Income: HI_1-149,Income: HI_150-299,Income: HI_300-399,Income: HI_400-499,Income: HI_500-649,Income: HI_650-799"
+"Income: H Middle","Income: HI_800-999,Income: HI_1000-1249,Income: HI_1250-1499,Income: HI_1500-1749,Income: HI_1750-1999,Income: HI_2000-2499"
+"Income: H > $2500","Income: HI_2500-2999,Income: HI_3000-3499,Income: HI_3500-3999,Income: HI_4000+"
+"Address: Same Address","Address: Same Address 1 yr,Address: Same Address 5 yr"
+"Address: Move Address","Address: Moved Same SA2 1 yr,Address: Moved Dif SA2 1 yr,Address: Moved 1 yr total,Address: Moved Same SA2 5 yr,Address: Moved Dif SA2 5 yr,Address: Moved 5 yr total"
+"Car: Own 3+ car","Car: 3 car,Car: 4+car"
+"Edu: University","Edu: Bachelor,Edu: Postgrad"
+"Edu: No Year 12","Edu: Did not go to school,Edu: Yr 8 or below,Edu: Yr 9 - 11"
