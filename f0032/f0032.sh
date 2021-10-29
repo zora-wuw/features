@@ -27,7 +27,7 @@ elif [ "$action" == "download_prefix" ]; then
   done
 elif [ "$action" == "upload" ]; then
   for file in $file_array; do
-    swift --os-username $swift_username --os-password $swift_pwd --os-auth-url $swift_auth_url --os-region-name $swift_region_name --os-project-id $swift_project_id --os-project-name $swift_project_name --os-user-domain-name $swift_user_domain_name --os-identity-api-version 3 upload $container_name $file
+    swift --os-username $swift_username --os-password $swift_pwd --os-auth-url $swift_auth_url --os-region-name $swift_region_name --os-project-id $swift_project_id --os-project-name $swift_project_name --os-user-domain-name $swift_user_domain_name --os-identity-api-version 3 upload $container_name $file -S 5000000000
   done
 elif [ "$action" == "tempurl" ]; then
   expire_seconds=$5
