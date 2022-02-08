@@ -31,6 +31,7 @@
 * f0029: Download Collections from MongoDB and Convert Them to CSV Files
 * f0030: Read Census CSV Files (output of f0029) and Scaling Values with Relevant Population
 * f0031: Read a Census CSV File (output of f0030) and Clustering Data by Using PCA and Kmeans.
+* f0032: Upload/Download Files from Nectar Container Using Swift
 
 ## Detailed Description
 ### f0002: Create Index
@@ -515,4 +516,14 @@ Inputs:
 		
 Outputs:
 * CSV file: CSV file containing clustered 2016 Census data 
-	
+
+### f0032: Upload/Download Files from Nectar Container Using Swift
+
+* Usage: 
+  * bash f0032.sh $1 $2 $3 $4
+
+* Parameter:
+  * $1 : config file
+  * $2 : container name
+  * $3 : files separated by comma ","
+  * $4 : "upload" OR "download" OR "download_prefix" OR "tempurl"
